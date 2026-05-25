@@ -68,8 +68,11 @@ header{
   transition:padding .3s,background .3s;
 }
 header.shrink{padding:.3rem 5vw;background:rgba(10,9,8,.96)}
-header .brand img{height:62px;transition:height .3s}
-header.shrink .brand img{height:48px}
+header .brand img{height:78px;width:auto;max-width:90px;object-fit:contain;
+  filter:drop-shadow(0 2px 8px rgba(201,168,76,.2));
+  transition:height .3s,filter .3s}
+header .brand:hover img{filter:drop-shadow(0 2px 14px rgba(201,168,76,.45))}
+header.shrink .brand img{height:60px;max-width:72px}
 nav ul{display:flex;gap:1.7rem;align-items:center}
 nav a{
   font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
@@ -288,7 +291,8 @@ footer{background:var(--noir-2);border-top:1px solid rgba(201,168,76,.2);
   letter-spacing:.18em;color:var(--or);margin-bottom:1.1rem}
 .foot-grid li{margin:.45rem 0;font-size:.88rem;color:#bdb8ab}
 .foot-grid a:hover{color:var(--or)}
-.foot-grid img{height:80px;margin-bottom:1rem}
+.foot-grid img{height:110px;width:auto;max-width:130px;object-fit:contain;margin-bottom:1rem;
+  filter:drop-shadow(0 2px 10px rgba(201,168,76,.18))}
 .evin{max-width:1240px;margin:0 auto;padding:1.6rem 0;
   border-top:1px solid rgba(201,168,76,.16);
   font-size:.74rem;color:var(--gris);text-align:center;line-height:1.7}
@@ -554,4 +558,7 @@ footer{background:var(--noir-2);border-top:1px solid rgba(201,168,76,.2);
   section{padding:4.5rem 0}
   .hero-cta{flex-direction:column}
   .hero-cta .btn{width:100%}
+  header .brand img{height:58px;max-width:68px}
+  header.shrink .brand img{height:48px;max-width:58px}
+  .foot-grid img{height:90px;max-width:108px}
 }
