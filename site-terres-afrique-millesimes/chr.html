@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Espace CHR — Professionnels · Terres d'Afrique &amp; Millésimes</title>
+<meta name="description" content="Espace professionnel CHR de Terres d'Afrique & Millésimes : catalogue dédié, tarifs HT, vins au verre, bon de commande en volume avec calcul automatique.">
+<link rel="icon" href="assets/images/logo-tam.svg">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><img src="assets/images/logo-tam.svg" alt="Terres d'Afrique &amp; Millésimes"></a>
+  <nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="oenotourisme.html">Œnotourisme</a></li>
+    <li><a href="evenements.html">Événements</a></li>
+    <li><a href="formation.html">Academy</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="chr.html" class="active">Espace CHR</a></li>
+    <li><a href="export.html">Export Afrique</a></li>
+    <li><a class="nav-cta" href="contact.html">Contact</a></li>
+    <li class="lang-switch"><a href="chr.html" class="current">FR</a><span class="sep">·</span><a href="en/chr.html">EN</a><span class="sep">·</span><a href="es/chr.html">ES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner" style="background-image:linear-gradient(rgba(10,9,8,.66),rgba(10,9,8,.88)),url('assets/images/vignoble-rhone.jpg')">
+  <div class="banner-inner">
+    <span class="surtitre">Espace Professionnel</span>
+    <h1>CHR &amp; Cavistes</h1>
+    <p class="lead">Cafés, hôtels, restaurants et cavistes&nbsp;: un catalogue dédié,
+    des tarifs professionnels et une logistique fiable.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="grid g3">
+    <div class="card reveal"><h3>Tarifs dédiés</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Grille professionnelle HT, dégressive
+      selon le volume. Conditions de paiement à 30 jours fin de mois.</p></div>
+    <div class="card reveal"><h3>Vins au verre</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Sélection pensée pour la carte au verre&nbsp;:
+      rotation rapide, marge maîtrisée, fiches argumentaires fournies.</p></div>
+    <div class="card reveal"><h3>Commande en volume</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Bon de commande professionnel,
+      livraison thermo-régulée 0,99 € HT / bouteille, suivi dédié.</p></div>
+  </div>
+</section>
+
+<section class="wrap" style="background:var(--noir-2);border-top:1px solid rgba(201,168,76,.16);border-bottom:1px solid rgba(201,168,76,.16)">
+  <div class="center">
+    <span class="surtitre reveal">Accès réservé</span>
+    <h2 class="reveal">Espace privé professionnel</h2>
+    <div class="divider"></div>
+    <p class="lead reveal" style="max-width:600px;margin:0 auto">Connectez-vous pour accéder
+    au catalogue CHR complet, aux prix nets et au bon de commande.</p>
+  </div>
+  <div class="card reveal" style="max-width:440px;margin:2.5rem auto 0">
+    <form data-demo>
+      <div><label>Identifiant professionnel</label><input type="email" placeholder="email@etablissement.fr" required></div>
+      <div><label>Mot de passe</label><input type="password" placeholder="••••••••" required></div>
+      <button class="btn btn-fill" type="submit" style="width:100%">Accéder à mon espace</button>
+      <p class="form-msg" style="display:none;color:var(--or);font-size:.85rem;text-align:center">
+        Espace en cours d'activation — un conseiller TAM vous recontacte sous 24 h.</p>
+    </form>
+    <p style="font-size:.8rem;color:var(--gris);text-align:center;margin-top:1rem">
+      Pas encore de compte ? <a href="contact.html" style="color:var(--or)">Demander un accès professionnel</a></p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="center">
+    <span class="surtitre reveal">Bon de commande professionnel</span>
+    <h2 class="reveal">Calcul automatique</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="card reveal" style="margin-top:2rem">
+    <table>
+      <tr><th>Produit</th><th>Prix unitaire HT</th><th>Quantité</th><th>Total</th></tr>
+      <tr class="bon-ligne"><td>Ch. Lestage Simon 2019</td>
+        <td><input class="bon-pu" type="number" value="28.50" step="0.01"></td>
+        <td><input class="bon-qte" type="number" value="0" min="0"></td>
+        <td class="bon-tot">0,00 €</td></tr>
+      <tr class="bon-ligne"><td>Dom. Jean Bouchard 2020</td>
+        <td><input class="bon-pu" type="number" value="68.00" step="0.01"></td>
+        <td><input class="bon-qte" type="number" value="0" min="0"></td>
+        <td class="bon-tot">0,00 €</td></tr>
+      <tr class="bon-ligne"><td>Champagne J. Charpentier Brut</td>
+        <td><input class="bon-pu" type="number" value="32.50" step="0.01"></td>
+        <td><input class="bon-qte" type="number" value="0" min="0"></td>
+        <td class="bon-tot">0,00 €</td></tr>
+    </table>
+    <div style="max-width:340px;margin-left:auto">
+      <div class="cart-line"><span>Total HT</span><span id="bon-ht">0,00 €</span></div>
+      <div class="cart-line"><span>TVA 20 %</span><span id="bon-tva">0,00 €</span></div>
+      <div class="cart-total"><span>Total TTC</span><span id="bon-ttc">0,00 €</span></div>
+      <div class="cart-line" style="border:0"><span style="color:var(--gris)">Équivalent FCFA</span>
+        <span id="bon-cfa" style="color:var(--gris)">0 FCFA</span></div>
+    </div>
+    <button class="btn" style="margin-top:1rem">Transmettre la commande</button>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <img src="assets/images/logo-tam.svg" alt="TAM">
+      <p style="font-size:.88rem;color:#bdb8ab;max-width:300px">
+        Maison fondée en 2016. La rencontre des grands terroirs de France
+        et de la gastronomie africaine. Distribution premium France,
+        Union Européenne et Afrique subsaharienne.</p>
+      <p class="jardins" style="margin-top:1rem">« La rigueur est l'âme du luxe »</p>
+    </div>
+    <div>
+      <h4>Naviguer</h4>
+      <ul>
+        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="oenotourisme.html">Œnotourisme</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="formation.html">Prestige Wine Academy</a></li>
+        <li><a href="blog.html">Le Journal</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Professionnels</h4>
+      <ul>
+        <li><a href="chr.html">Espace CHR</a></li>
+        <li><a href="export.html">Export Afrique</a></li>
+        <li><a href="association.html">Les Jardins de l'Espoir</a></li>
+        <li><a href="cgv.html">CGV &amp; Conditions</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Export</h4>
+      <ul>
+        <li>Marie Louise Ticki — Fondatrice</li>
+        <li><a href="tel:+33652426953">+33 (0)6 52 42 69 53</a></li>
+        <li><a href="mailto:contact@terreafriqueetmillesimes.com">contact@terreafriqueetmillesimes.com</a></li>
+        <li>99 boulevard de la Reine, 78000 Versailles</li>
+        <li>Entrepôt : 169 bis rue des Murlins, 45000 Orléans</li>
+      </ul>
+    </div>
+  </div>
+  <div class="evin">
+    <strong style="color:#cfc9bb">L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ — À CONSOMMER AVEC MODÉRATION.</strong><br>
+    La consommation de boissons alcoolisées pendant la grossesse, même en faible quantité,
+    peut avoir des conséquences graves sur la santé de l'enfant.
+    La vente d'alcool aux mineurs est interdite — l'acheteur déclare avoir 18 ans révolus.
+  </div>
+  <div class="foot-bottom">
+    <span>© <span class="year"></span> Terres d'Afrique &amp; Millésimes — Groupe Queen Egome · SIRET 945 025 666 00013</span>
+    <span class="jardins">Une part de chaque vente soutient Les Jardins de l'Espoir by Queen Egome</span>
+  </div>
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

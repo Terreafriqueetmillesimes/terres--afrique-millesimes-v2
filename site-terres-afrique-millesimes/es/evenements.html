@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eventos &amp; Entradas · Terres d'Afrique &amp; Millésimes</title>
+<meta name="description" content="Reserve sus entradas para las degustaciones, masterclasses y cenas de maridaje de Terres d'Afrique & Millésimes. Entrada con código QR, pago en línea.">
+<link rel="icon" href="../assets/images/logo-tam.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><img src="../assets/images/logo-tam.svg" alt="Terres d'Afrique &amp; Millésimes"></a>
+  <nav>
+    <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="oenotourisme.html">Enoturismo</a></li>
+    <li><a href="evenements.html" class="active">Eventos</a></li>
+    <li><a href="formation.html">Academy</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="chr.html">Área HoReCa</a></li>
+    <li><a href="export.html">Exportación África</a></li>
+    <li><a class="nav-cta" href="contact.html">Contacto</a></li>
+    <li class="lang-switch"><a href="../evenements.html">FR</a><span class="sep">·</span><a href="../en/evenements.html">EN</a><span class="sep">·</span><a href="evenements.html" class="current">ES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner" style="background-image:linear-gradient(rgba(10,9,8,.66),rgba(10,9,8,.88)),url('../assets/images/hero-loire.jpg')">
+  <div class="banner-inner">
+    <span class="surtitre">Eventos &amp; Entradas</span>
+    <h1>Vivir el vino, juntos</h1>
+    <p class="lead">Degustaciones, masterclasses y cenas de maridaje. Reserva
+    y entrada electrónica con código QR — pago inmediato.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="center">
+    <span class="surtitre reveal">Agenda</span>
+    <h2 class="reveal">Las próximas citas</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="grid g3" style="margin-top:2.5rem">
+    <div class="card reveal">
+      <span class="tag">Degustación</span>
+      <h3>Grand Tour de Burdeos</h3>
+      <p style="font-size:.9rem;color:var(--gris)">Versailles · Salón TAM</p>
+      <p style="font-size:.92rem;color:#c4bfb2;margin:.8rem 0">Cinco Crus Bourgeois comentados,
+      maridajes con la cocina camerunesa. 12 plazas.</p>
+      <div class="prix"><span class="eur">45 €</span></div>
+      <button class="btn btn-sm" data-billet="Grand Tour de Bordeaux" data-prix="45">Reservar mi entrada</button>
+    </div>
+    <div class="card reveal">
+      <span class="tag">Masterclass</span>
+      <h3>Los 5 maridajes del Tomo I</h3>
+      <p style="font-size:.9rem;color:var(--gris)">En línea · 2 h</p>
+      <p style="font-size:.92rem;color:#c4bfb2;margin:.8rem 0">Marie Louise Ticki desvela
+      cinco maridajes con gastronomía africana &amp; grandes vinos. Set de degustación incluido.</p>
+      <div class="prix"><span class="eur">89 €</span></div>
+      <button class="btn btn-sm" data-billet="Masterclass 5 accords Tome I" data-prix="89">Reservar mi entrada</button>
+    </div>
+    <div class="card reveal">
+      <span class="tag">Cena de excepción</span>
+      <h3>Champagne &amp; Mariscos</h3>
+      <p style="font-size:.9rem;color:var(--gris)">Orléans · Velada VIP</p>
+      <p style="font-size:.92rem;color:#c4bfb2;margin:.8rem 0">Cena gastronómica en cinco
+      servicios en torno a la Maison J. Charpentier. 24 cubiertos.</p>
+      <div class="prix"><span class="eur">120 €</span></div>
+      <button class="btn btn-sm" data-billet="Dîner Champagne & Fruits de mer" data-prix="120">Reservar mi entrada</button>
+    </div>
+  </div>
+  <p class="center" style="font-size:.82rem;color:var(--gris);margin-top:2rem">
+    Gestión de plazas en tiempo real · Entrada electrónica con código QR enviada por correo ·
+    Pago seguro Stripe / PayPal.</p>
+</section>
+
+<!-- modale billet -->
+<div id="billet-modal" style="display:none;position:fixed;inset:0;z-index:200;
+  background:rgba(10,9,8,.92);align-items:center;justify-content:center;padding:5vw">
+  <div style="background:var(--noir-2);border:1px solid var(--or);max-width:380px;
+    width:100%;padding:2.4rem;text-align:center;position:relative">
+    <button class="billet-close" style="position:absolute;top:.8rem;right:1rem;background:none;
+      border:0;color:var(--or);font-size:1.4rem;cursor:pointer">✕</button>
+    <span class="surtitre">Entrada confirmada</span>
+    <h3 class="billet-evt" style="margin:.6rem 0"></h3>
+    <img class="billet-qr" alt="Código QR de la entrada" style="margin:1rem auto;width:200px;height:200px;
+      border:1px solid rgba(201,168,76,.3)">
+    <p style="font-size:.85rem;color:var(--gris)">Referencia</p>
+    <p class="billet-ref" style="font-family:var(--titre);color:var(--or);font-size:1.3rem"></p>
+    <p style="margin-top:.6rem">Importe&nbsp;: <span class="billet-prix" style="color:var(--or-clair)"></span></p>
+    <p style="font-size:.76rem;color:var(--gris);margin-top:1rem">
+      Presente este código QR en la entrada. La entrada también se envía por correo electrónico.</p>
+  </div>
+</div>
+
+<section class="quote-band">
+  <p>« Un evento logrado deja un sabor que dura más que la velada. »</p>
+  <cite>Terres d'Afrique &amp; Millésimes</cite>
+</section>
+
+<section class="wrap center reveal">
+  <span class="surtitre">Eventos privados</span>
+  <h2>Organice su evento a medida</h2>
+  <div class="divider"></div>
+  <p class="lead" style="max-width:680px;margin:0 auto 1.6rem">Degustaciones corporativas,
+  cenas de prestigio, lanzamientos de marca&nbsp;: diseñamos la experiencia a medida.</p>
+  <a href="contact.html" class="btn">Solicitar presupuesto para su evento</a>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <img src="../assets/images/logo-tam.svg" alt="TAM">
+      <p style="font-size:.88rem;color:#bdb8ab;max-width:300px">
+        Casa fundada en 2016. El encuentro de los grandes terroirs de Francia
+        y la gastronomía africana. Distribución premium Francia,
+        Unión Europea y África subsahariana.</p>
+      <p class="jardins" style="margin-top:1rem">« El rigor es el alma del lujo »</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="oenotourisme.html">Enoturismo</a></li>
+        <li><a href="evenements.html">Eventos</a></li>
+        <li><a href="formation.html">Prestige Wine Academy</a></li>
+        <li><a href="blog.html">El Diario</a></li>
+        <li><a href="partenaires.html">Socios</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Profesionales</h4>
+      <ul>
+        <li><a href="chr.html">Área HoReCa</a></li>
+        <li><a href="export.html">Exportación África</a></li>
+        <li><a href="association.html">Les Jardins de l'Espoir</a></li>
+        <li><a href="cgv.html">CGV &amp; Condiciones</a></li>
+        <li><a href="mentions-legales.html">Aviso legal</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto Exportación</h4>
+      <ul>
+        <li>Marie Louise Ticki — Fundadora</li>
+        <li><a href="tel:+33652426953">+33 (0)6 52 42 69 53</a></li>
+        <li><a href="mailto:contact@terreafriqueetmillesimes.com">contact@terreafriqueetmillesimes.com</a></li>
+        <li>99 boulevard de la Reine, 78000 Versailles</li>
+        <li>Almacén: 169 bis rue des Murlins, 45000 Orléans</li>
+      </ul>
+    </div>
+  </div>
+  <div class="evin">
+    <strong style="color:#cfc9bb">EL ABUSO DEL ALCOHOL ES PELIGROSO PARA LA SALUD. CONSUMA CON MODERACIÓN.</strong><br>
+    El consumo de bebidas alcohólicas durante el embarazo, incluso en pequeñas cantidades,
+    puede tener consecuencias graves para la salud del niño.
+    Prohibida la venta de alcohol a menores — el comprador declara ser mayor de 18 años.
+  </div>
+  <div class="foot-bottom">
+    <span>© <span class="year"></span> Terres d'Afrique &amp; Millésimes — Groupe Queen Egome · SIRET 945 025 666 00013</span>
+    <span class="jardins">Una parte de cada venta apoya a Les Jardins de l'Espoir by Queen Egome</span>
+  </div>
+</footer>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

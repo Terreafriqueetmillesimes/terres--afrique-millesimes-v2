@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HoReCa Area — Trade Professionals · Terres d'Afrique &amp; Millésimes</title>
+<meta name="description" content="Trade HoReCa area of Terres d'Afrique & Millésimes: dedicated catalogue, ex-VAT pricing, by-the-glass wines, volume purchase order with automatic calculation.">
+<link rel="icon" href="../assets/images/logo-tam.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><img src="../assets/images/logo-tam.svg" alt="Terres d'Afrique &amp; Millésimes"></a>
+  <nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="oenotourisme.html">Wine Tourism</a></li>
+    <li><a href="evenements.html">Events</a></li>
+    <li><a href="formation.html">Academy</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="chr.html" class="active">HoReCa Area</a></li>
+    <li><a href="export.html">Africa Export</a></li>
+    <li><a class="nav-cta" href="contact.html">Contact</a></li>
+    <li class="lang-switch"><a href="../chr.html">FR</a><span class="sep">·</span><a href="chr.html" class="current">EN</a><span class="sep">·</span><a href="../es/chr.html">ES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner" style="background-image:linear-gradient(rgba(10,9,8,.66),rgba(10,9,8,.88)),url('../assets/images/vignoble-rhone.jpg')">
+  <div class="banner-inner">
+    <span class="surtitre">Trade Area</span>
+    <h1>HoReCa &amp; Wine Merchants</h1>
+    <p class="lead">Cafés, hotels, restaurants and wine merchants: a dedicated catalogue,
+    professional pricing and reliable logistics.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="grid g3">
+    <div class="card reveal"><h3>Dedicated pricing</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Professional ex-VAT pricing, tiered by volume.
+      Payment terms: 30 days end of month.</p></div>
+    <div class="card reveal"><h3>By-the-glass wines</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">A selection designed for the by-the-glass list:
+      fast rotation, controlled margin, trade notes included.</p></div>
+    <div class="card reveal"><h3>Volume ordering</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Professional purchase order,
+      temperature-controlled delivery 0.99 € ex-VAT / bottle, dedicated follow-up.</p></div>
+  </div>
+</section>
+
+<section class="wrap" style="background:var(--noir-2);border-top:1px solid rgba(201,168,76,.16);border-bottom:1px solid rgba(201,168,76,.16)">
+  <div class="center">
+    <span class="surtitre reveal">Reserved access</span>
+    <h2 class="reveal">Private trade area</h2>
+    <div class="divider"></div>
+    <p class="lead reveal" style="max-width:600px;margin:0 auto">Log in to access
+    the full HoReCa catalogue, net prices and purchase order.</p>
+  </div>
+  <div class="card reveal" style="max-width:440px;margin:2.5rem auto 0">
+    <form data-demo>
+      <div><label>Trade login</label><input type="email" placeholder="email@establishment.com" required></div>
+      <div><label>Password</label><input type="password" placeholder="••••••••" required></div>
+      <button class="btn btn-fill" type="submit" style="width:100%">Access my area</button>
+      <p class="form-msg" style="display:none;color:var(--or);font-size:.85rem;text-align:center">
+        Area being activated — a TAM advisor will be in touch within 24 hours.</p>
+    </form>
+    <p style="font-size:.8rem;color:var(--gris);text-align:center;margin-top:1rem">
+      No account yet? <a href="contact.html" style="color:var(--or)">Request trade access</a></p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="center">
+    <span class="surtitre reveal">Professional purchase order</span>
+    <h2 class="reveal">Automatic calculation</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="card reveal" style="margin-top:2rem">
+    <table>
+      <tr><th>Product</th><th>Unit price ex-VAT</th><th>Quantity</th><th>Total</th></tr>
+      <tr class="bon-ligne"><td>Ch. Lestage Simon 2019</td>
+        <td><input class="bon-pu" type="number" value="28.50" step="0.01"></td>
+        <td><input class="bon-qte" type="number" value="0" min="0"></td>
+        <td class="bon-tot">0.00 €</td></tr>
+      <tr class="bon-ligne"><td>Dom. Jean Bouchard 2020</td>
+        <td><input class="bon-pu" type="number" value="68.00" step="0.01"></td>
+        <td><input class="bon-qte" type="number" value="0" min="0"></td>
+        <td class="bon-tot">0.00 €</td></tr>
+      <tr class="bon-ligne"><td>Champagne J. Charpentier Brut</td>
+        <td><input class="bon-pu" type="number" value="32.50" step="0.01"></td>
+        <td><input class="bon-qte" type="number" value="0" min="0"></td>
+        <td class="bon-tot">0.00 €</td></tr>
+    </table>
+    <div style="max-width:340px;margin-left:auto">
+      <div class="cart-line"><span>Total ex-VAT</span><span id="bon-ht">0.00 €</span></div>
+      <div class="cart-line"><span>VAT 20%</span><span id="bon-tva">0.00 €</span></div>
+      <div class="cart-total"><span>Total incl. VAT</span><span id="bon-ttc">0.00 €</span></div>
+      <div class="cart-line" style="border:0"><span style="color:var(--gris)">FCFA equivalent</span>
+        <span id="bon-cfa" style="color:var(--gris)">0 FCFA</span></div>
+    </div>
+    <button class="btn" style="margin-top:1rem">Submit the order</button>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <img src="../assets/images/logo-tam.svg" alt="TAM">
+      <p style="font-size:.88rem;color:#bdb8ab;max-width:300px">
+        House founded in 2016. Where France's finest terroirs meet
+        African gastronomy. Premium distribution in France,
+        the European Union and Sub-Saharan Africa.</p>
+      <p class="jardins" style="margin-top:1rem">« Rigour is the soul of luxury »</p>
+    </div>
+    <div>
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="oenotourisme.html">Wine Tourism</a></li>
+        <li><a href="evenements.html">Events</a></li>
+        <li><a href="formation.html">Prestige Wine Academy</a></li>
+        <li><a href="blog.html">The Journal</a></li>
+        <li><a href="partenaires.html">Partners</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Trade</h4>
+      <ul>
+        <li><a href="chr.html">HoReCa Area</a></li>
+        <li><a href="export.html">Africa Export</a></li>
+        <li><a href="association.html">Les Jardins de l'Espoir</a></li>
+        <li><a href="cgv.html">Terms &amp; Conditions</a></li>
+        <li><a href="mentions-legales.html">Legal Notice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Export Contact</h4>
+      <ul>
+        <li>Marie Louise Ticki — Founder</li>
+        <li><a href="tel:+33652426953">+33 (0)6 52 42 69 53</a></li>
+        <li><a href="mailto:contact@terreafriqueetmillesimes.com">contact@terreafriqueetmillesimes.com</a></li>
+        <li>99 boulevard de la Reine, 78000 Versailles</li>
+        <li>Warehouse: 169 bis rue des Murlins, 45000 Orléans</li>
+      </ul>
+    </div>
+  </div>
+  <div class="evin">
+    <strong style="color:#cfc9bb">EXCESSIVE ALCOHOL CONSUMPTION IS HARMFUL TO HEALTH — DRINK RESPONSIBLY.</strong><br>
+    Drinking alcohol during pregnancy, even in small amounts,
+    can have serious consequences for the health of the child.
+    The sale of alcohol to minors is strictly prohibited — the purchaser declares they are 18 years of age or older.
+  </div>
+  <div class="foot-bottom">
+    <span>© <span class="year"></span> Terres d'Afrique &amp; Millésimes — Groupe Queen Egome · SIRET 945 025 666 00013</span>
+    <span class="jardins">A portion of every sale supports Les Jardins de l'Espoir by Queen Egome</span>
+  </div>
+</footer>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

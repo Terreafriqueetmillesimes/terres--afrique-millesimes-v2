@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Africa Export — Quotes &amp; Logistics · Terres d'Afrique &amp; Millésimes</title>
+<meta name="description" content="Wine export to Sub-Saharan Africa: logistics cost simulator, customs, export conditions for Cameroon, Ivory Coast, Senegal, Gabon.">
+<link rel="icon" href="../assets/images/logo-tam.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><img src="../assets/images/logo-tam.svg" alt="Terres d'Afrique &amp; Millésimes"></a>
+  <nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="oenotourisme.html">Wine Tourism</a></li>
+    <li><a href="evenements.html">Events</a></li>
+    <li><a href="formation.html">Academy</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="chr.html">HoReCa Area</a></li>
+    <li><a href="export.html" class="active">Africa Export</a></li>
+    <li><a class="nav-cta" href="contact.html">Contact</a></li>
+    <li class="lang-switch"><a href="../export.html">FR</a><span class="sep">·</span><a href="export.html" class="current">EN</a><span class="sep">·</span><a href="../es/export.html">ES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner">
+  <div class="banner-inner">
+    <span class="surtitre">Sub-Saharan Africa Export</span>
+    <h1>The wine route to Africa</h1>
+    <p class="lead">Cameroon, Ivory Coast, Senegal, Gabon. Quotes, logistics
+    simulation and end-to-end customs support.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="grid g4">
+    <div class="card reveal"><h3>MOQ</h3><p style="font-size:.9rem;color:#c4bfb2">
+      Minimum 10 mixed cases — 60 bottles. Mixed pallet permitted.</p></div>
+    <div class="card reveal"><h3>Incoterm</h3><p style="font-size:.9rem;color:#c4bfb2">
+      EXW Versailles by default. Other incoterms available on request.</p></div>
+    <div class="card reveal"><h3>Payment</h3><p style="font-size:.9rem;color:#c4bfb2">
+      100% upfront by SWIFT transfer. Retention of title until full payment.</p></div>
+    <div class="card reveal"><h3>Lead time</h3><p style="font-size:.9rem;color:#c4bfb2">
+      4 to 8 weeks depending on destination and customs formalities.</p></div>
+  </div>
+</section>
+
+<section class="wrap" style="background:var(--noir-2);border-top:1px solid rgba(201,168,76,.16);border-bottom:1px solid rgba(201,168,76,.16)">
+  <div class="center">
+    <span class="surtitre reveal">Simulator</span>
+    <h2 class="reveal">Estimate your landed cost</h2>
+    <div class="divider"></div>
+    <p class="lead reveal" style="max-width:620px;margin:0 auto">An indicative estimate
+    of freight + temperature-controlled packaging + customs, in euros and FCFA.</p>
+  </div>
+  <div class="card reveal" style="max-width:620px;margin:2.5rem auto 0">
+    <div class="form-row">
+      <div><label>Destination country</label>
+        <select id="sim-pays">
+          <option>Cameroon</option><option>Ivory Coast</option>
+          <option>Senegal</option><option>Gabon</option>
+        </select></div>
+      <div><label>Number of cases (6 btl)</label>
+        <input id="sim-cartons" type="number" value="10" min="10"></div>
+    </div>
+    <div><label>Merchandise value ex-VAT (€)</label>
+      <input id="sim-valeur" type="number" value="1500" step="10"></div>
+    <button class="btn btn-fill" id="sim-calc" style="margin-top:1rem;width:100%">Calculate landed cost</button>
+    <div id="sim-result" style="margin-top:1.4rem"></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="split">
+    <div class="txt reveal">
+      <span class="surtitre">Customs &amp; logistics</span>
+      <h2>What to know before shipping</h2>
+      <div class="divider left"></div>
+      <p>Customs duties, import taxes and formalities are the exclusive
+      responsibility of the client at destination. TAM provides the pro-forma invoice, the
+      certificate of origin and supports customs clearance via its partner VITICOLIS.</p>
+      <ul style="margin:1rem 0">
+        <li style="margin:.4rem 0">— <strong style="color:var(--or)">Hidden costs to anticipate:</strong> local taxes, port handling, storage.</li>
+        <li style="margin:.4rem 0">— <strong style="color:var(--or)">Pre-order:</strong> secure your volumes and optimise your cash flow.</li>
+        <li style="margin:.4rem 0">— <strong style="color:var(--or)">Importer network:</strong> we connect you with reliable partners.</li>
+      </ul>
+      <p style="font-size:.85rem;color:var(--gris)">Export regime — VAT exempt (art. 262 CGI).
+      Fixed exchange rate 1 € = 655.957 FCFA.</p>
+    </div>
+    <img src="../assets/images/hero-loire.jpg" alt="Wine export logistics" class="reveal">
+  </div>
+</section>
+
+<section class="wrap center reveal">
+  <span class="surtitre">Quote request</span>
+  <h2>Let's launch your first pallet</h2>
+  <div class="divider"></div>
+  <div class="card reveal" style="max-width:560px;margin:2rem auto 0;text-align:left">
+    <form data-demo>
+      <div class="form-row">
+        <div><label>Company</label><input type="text" required></div>
+        <div><label>Country</label><select><option>Cameroon</option><option>Ivory Coast</option>
+          <option>Senegal</option><option>Gabon</option><option>Other</option></select></div>
+      </div>
+      <div><label>E-mail</label><input type="email" required></div>
+      <div><label>Estimated volume &amp; desired products</label><textarea></textarea></div>
+      <button class="btn btn-fill" type="submit" style="width:100%">Receive my export quote</button>
+      <p class="form-msg" style="display:none;color:var(--or);font-size:.85rem;text-align:center">
+        Request received — a firm quote will be sent to you within two working days.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <img src="../assets/images/logo-tam.svg" alt="TAM">
+      <p style="font-size:.88rem;color:#bdb8ab;max-width:300px">
+        House founded in 2016. Where France's finest terroirs meet
+        African gastronomy. Premium distribution in France,
+        the European Union and Sub-Saharan Africa.</p>
+      <p class="jardins" style="margin-top:1rem">« Rigour is the soul of luxury »</p>
+    </div>
+    <div>
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="oenotourisme.html">Wine Tourism</a></li>
+        <li><a href="evenements.html">Events</a></li>
+        <li><a href="formation.html">Prestige Wine Academy</a></li>
+        <li><a href="blog.html">The Journal</a></li>
+        <li><a href="partenaires.html">Partners</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Trade</h4>
+      <ul>
+        <li><a href="chr.html">HoReCa Area</a></li>
+        <li><a href="export.html">Africa Export</a></li>
+        <li><a href="association.html">Les Jardins de l'Espoir</a></li>
+        <li><a href="cgv.html">Terms &amp; Conditions</a></li>
+        <li><a href="mentions-legales.html">Legal Notice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Export Contact</h4>
+      <ul>
+        <li>Marie Louise Ticki — Founder</li>
+        <li><a href="tel:+33652426953">+33 (0)6 52 42 69 53</a></li>
+        <li><a href="mailto:contact@terreafriqueetmillesimes.com">contact@terreafriqueetmillesimes.com</a></li>
+        <li>99 boulevard de la Reine, 78000 Versailles</li>
+        <li>Warehouse: 169 bis rue des Murlins, 45000 Orléans</li>
+      </ul>
+    </div>
+  </div>
+  <div class="evin">
+    <strong style="color:#cfc9bb">EXCESSIVE ALCOHOL CONSUMPTION IS HARMFUL TO HEALTH — DRINK RESPONSIBLY.</strong><br>
+    Drinking alcohol during pregnancy, even in small amounts,
+    can have serious consequences for the health of the child.
+    The sale of alcohol to minors is strictly prohibited — the purchaser declares they are 18 years of age or older.
+  </div>
+  <div class="foot-bottom">
+    <span>© <span class="year"></span> Terres d'Afrique &amp; Millésimes — Groupe Queen Egome · SIRET 945 025 666 00013</span>
+    <span class="jardins">A portion of every sale supports Les Jardins de l'Espoir by Queen Egome</span>
+  </div>
+</footer>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

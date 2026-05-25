@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Events &amp; Ticketing · Terres d'Afrique &amp; Millésimes</title>
+<meta name="description" content="Book your tickets for tastings, masterclasses and food and wine pairing dinners at Terres d'Afrique & Millésimes. QR code e-ticket, immediate online payment.">
+<link rel="icon" href="../assets/images/logo-tam.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><img src="../assets/images/logo-tam.svg" alt="Terres d'Afrique &amp; Millésimes"></a>
+  <nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="oenotourisme.html">Wine Tourism</a></li>
+    <li><a href="evenements.html" class="active">Events</a></li>
+    <li><a href="formation.html">Academy</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="chr.html">HoReCa Area</a></li>
+    <li><a href="export.html">Africa Export</a></li>
+    <li><a class="nav-cta" href="contact.html">Contact</a></li>
+    <li class="lang-switch"><a href="../evenements.html">FR</a><span class="sep">·</span><a href="evenements.html" class="current">EN</a><span class="sep">·</span><a href="../es/evenements.html">ES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner" style="background-image:linear-gradient(rgba(10,9,8,.66),rgba(10,9,8,.88)),url('../assets/images/hero-loire.jpg')">
+  <div class="banner-inner">
+    <span class="surtitre">Events &amp; Ticketing</span>
+    <h1>Experiencing wine, together</h1>
+    <p class="lead">Tastings, masterclasses and pairing dinners. Booking
+    and electronic ticket with QR code — immediate payment.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="center">
+    <span class="surtitre reveal">Agenda</span>
+    <h2 class="reveal">Upcoming events</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="grid g3" style="margin-top:2.5rem">
+    <div class="card reveal">
+      <span class="tag">Tasting</span>
+      <h3>Grand Tour de Bordeaux</h3>
+      <p style="font-size:.9rem;color:var(--gris)">Versailles · TAM Salon</p>
+      <p style="font-size:.92rem;color:#c4bfb2;margin:.8rem 0">Five Crus Bourgeois with guided
+      commentary, paired with Cameroonian cuisine. 12 guests.</p>
+      <div class="prix"><span class="eur">45 €</span></div>
+      <button class="btn btn-sm" data-billet="Grand Tour de Bordeaux" data-prix="45">Book my ticket</button>
+    </div>
+    <div class="card reveal">
+      <span class="tag">Masterclass</span>
+      <h3>The 5 pairings from Volume I</h3>
+      <p style="font-size:.9rem;color:var(--gris)">Online · 2 hrs</p>
+      <p style="font-size:.92rem;color:#c4bfb2;margin:.8rem 0">Marie Louise Ticki unveils
+      five African food &amp; grand wine pairings. Tasting set included.</p>
+      <div class="prix"><span class="eur">89 €</span></div>
+      <button class="btn btn-sm" data-billet="Masterclass 5 accords Tome I" data-prix="89">Book my ticket</button>
+    </div>
+    <div class="card reveal">
+      <span class="tag">Prestige Dinner</span>
+      <h3>Champagne &amp; Seafood</h3>
+      <p style="font-size:.9rem;color:var(--gris)">Orléans · VIP Evening</p>
+      <p style="font-size:.92rem;color:#c4bfb2;margin:.8rem 0">Five-course gastronomic dinner
+      celebrating the wines of Maison J. Charpentier. 24 covers.</p>
+      <div class="prix"><span class="eur">120 €</span></div>
+      <button class="btn btn-sm" data-billet="Dîner Champagne & Fruits de mer" data-prix="120">Book my ticket</button>
+    </div>
+  </div>
+  <p class="center" style="font-size:.82rem;color:var(--gris);margin-top:2rem">
+    Real-time seat management · Electronic ticket with QR code sent by e-mail ·
+    Secure payment via Stripe / PayPal.</p>
+</section>
+
+<!-- ticket modal -->
+<div id="billet-modal" style="display:none;position:fixed;inset:0;z-index:200;
+  background:rgba(10,9,8,.92);align-items:center;justify-content:center;padding:5vw">
+  <div style="background:var(--noir-2);border:1px solid var(--or);max-width:380px;
+    width:100%;padding:2.4rem;text-align:center;position:relative">
+    <button class="billet-close" style="position:absolute;top:.8rem;right:1rem;background:none;
+      border:0;color:var(--or);font-size:1.4rem;cursor:pointer">✕</button>
+    <span class="surtitre">Booking confirmed</span>
+    <h3 class="billet-evt" style="margin:.6rem 0"></h3>
+    <img class="billet-qr" alt="QR code ticket" style="margin:1rem auto;width:200px;height:200px;
+      border:1px solid rgba(201,168,76,.3)">
+    <p style="font-size:.85rem;color:var(--gris)">Booking reference</p>
+    <p class="billet-ref" style="font-family:var(--titre);color:var(--or);font-size:1.3rem"></p>
+    <p style="margin-top:.6rem">Total: <span class="billet-prix" style="color:var(--or-clair)"></span></p>
+    <p style="font-size:.76rem;color:var(--gris);margin-top:1rem">
+      Please present this QR code at the door. Your ticket will also be sent by e-mail.</p>
+  </div>
+</div>
+
+<section class="quote-band">
+  <p>« A successful event leaves a taste that lingers long after the evening. »</p>
+  <cite>Terres d'Afrique &amp; Millésimes</cite>
+</section>
+
+<section class="wrap center reveal">
+  <span class="surtitre">Private Hire</span>
+  <h2>Organise your event</h2>
+  <div class="divider"></div>
+  <p class="lead" style="max-width:680px;margin:0 auto 1.6rem">Corporate tastings,
+  prestige dinners, brand launches: we design every experience to your brief.</p>
+  <a href="contact.html" class="btn">Request an event quote</a>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <img src="../assets/images/logo-tam.svg" alt="TAM">
+      <p style="font-size:.88rem;color:#bdb8ab;max-width:300px">
+        House founded in 2016. Where France's finest terroirs meet
+        African gastronomy. Premium distribution in France,
+        the European Union and Sub-Saharan Africa.</p>
+      <p class="jardins" style="margin-top:1rem">« Rigour is the soul of luxury »</p>
+    </div>
+    <div>
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="oenotourisme.html">Wine Tourism</a></li>
+        <li><a href="evenements.html">Events</a></li>
+        <li><a href="formation.html">Prestige Wine Academy</a></li>
+        <li><a href="blog.html">The Journal</a></li>
+        <li><a href="partenaires.html">Partners</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Trade</h4>
+      <ul>
+        <li><a href="chr.html">HoReCa Area</a></li>
+        <li><a href="export.html">Africa Export</a></li>
+        <li><a href="association.html">Les Jardins de l'Espoir</a></li>
+        <li><a href="cgv.html">Terms &amp; Conditions</a></li>
+        <li><a href="mentions-legales.html">Legal Notice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Export Contact</h4>
+      <ul>
+        <li>Marie Louise Ticki — Founder</li>
+        <li><a href="tel:+33652426953">+33 (0)6 52 42 69 53</a></li>
+        <li><a href="mailto:contact@terreafriqueetmillesimes.com">contact@terreafriqueetmillesimes.com</a></li>
+        <li>99 boulevard de la Reine, 78000 Versailles</li>
+        <li>Warehouse: 169 bis rue des Murlins, 45000 Orléans</li>
+      </ul>
+    </div>
+  </div>
+  <div class="evin">
+    <strong style="color:#cfc9bb">EXCESSIVE ALCOHOL CONSUMPTION IS HARMFUL TO HEALTH — DRINK RESPONSIBLY.</strong><br>
+    Drinking alcohol during pregnancy, even in small amounts,
+    can have serious consequences for the health of the child.
+    The sale of alcohol to minors is strictly prohibited — the purchaser declares they are 18 years of age or older.
+  </div>
+  <div class="foot-bottom">
+    <span>© <span class="year"></span> Terres d'Afrique &amp; Millésimes — Groupe Queen Egome · SIRET 945 025 666 00013</span>
+    <span class="jardins">A portion of every sale supports Les Jardins de l'Espoir by Queen Egome</span>
+  </div>
+</footer>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

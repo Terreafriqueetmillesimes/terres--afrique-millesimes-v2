@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exportación África — Presupuesto &amp; Logística · Terres d'Afrique &amp; Millésimes</title>
+<meta name="description" content="Exportación de vinos hacia el África subsahariana: simulador de coste logístico, aduana, condiciones de exportación a Camerún, Costa de Marfil, Senegal, Gabón.">
+<link rel="icon" href="../assets/images/logo-tam.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><img src="../assets/images/logo-tam.svg" alt="Terres d'Afrique &amp; Millésimes"></a>
+  <nav>
+    <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="oenotourisme.html">Enoturismo</a></li>
+    <li><a href="evenements.html">Eventos</a></li>
+    <li><a href="formation.html">Academy</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="chr.html">Área HoReCa</a></li>
+    <li><a href="export.html" class="active">Exportación África</a></li>
+    <li><a class="nav-cta" href="contact.html">Contacto</a></li>
+    <li class="lang-switch"><a href="../export.html">FR</a><span class="sep">·</span><a href="../en/export.html">EN</a><span class="sep">·</span><a href="export.html" class="current">ES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner">
+  <div class="banner-inner">
+    <span class="surtitre">Exportación África Subsahariana</span>
+    <h1>La ruta del vino hacia África</h1>
+    <p class="lead">Camerún, Costa de Marfil, Senegal, Gabón. Presupuesto, simulación
+    logística y acompañamiento aduanero de extremo a extremo.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="grid g4">
+    <div class="card reveal"><h3>MOQ</h3><p style="font-size:.9rem;color:#c4bfb2">
+      10 cajas mixtas mínimo — 60 botellas. Palé mixto autorizado.</p></div>
+    <div class="card reveal"><h3>Incoterm</h3><p style="font-size:.9rem;color:#c4bfb2">
+      EXW Versailles por defecto. Otros incoterms bajo petición.</p></div>
+    <div class="card reveal"><h3>Pago</h3><p style="font-size:.9rem;color:#c4bfb2">
+      100 % al realizar el pedido por transferencia SWIFT. Reserva de propiedad hasta el pago completo.</p></div>
+    <div class="card reveal"><h3>Plazo</h3><p style="font-size:.9rem;color:#c4bfb2">
+      4 a 8 semanas según destino y trámites aduaneros.</p></div>
+  </div>
+</section>
+
+<section class="wrap" style="background:var(--noir-2);border-top:1px solid rgba(201,168,76,.16);border-bottom:1px solid rgba(201,168,76,.16)">
+  <div class="center">
+    <span class="surtitre reveal">Simulador</span>
+    <h2 class="reveal">Estime su coste entregado</h2>
+    <div class="divider"></div>
+    <p class="lead reveal" style="max-width:620px;margin:0 auto">Una estimación indicativa
+    transporte + cajas isotérmicas + aduana, en euros y en FCFA.</p>
+  </div>
+  <div class="card reveal" style="max-width:620px;margin:2.5rem auto 0">
+    <div class="form-row">
+      <div><label>País de destino</label>
+        <select id="sim-pays">
+          <option>Camerún</option><option>Costa de Marfil</option>
+          <option>Senegal</option><option>Gabón</option>
+        </select></div>
+      <div><label>Número de cajas (6 btl)</label>
+        <input id="sim-cartons" type="number" value="10" min="10"></div>
+    </div>
+    <div><label>Valor de la mercancía HT (€)</label>
+      <input id="sim-valeur" type="number" value="1500" step="10"></div>
+    <button class="btn btn-fill" id="sim-calc" style="margin-top:1rem;width:100%">Calcular el coste entregado</button>
+    <div id="sim-result" style="margin-top:1.4rem"></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="split">
+    <div class="txt reveal">
+      <span class="surtitre">Aduana &amp; logística</span>
+      <h2>Lo que debe saber antes de expedir</h2>
+      <div class="divider left"></div>
+      <p>Los derechos de aduana, tasas de importación y trámites son de cargo
+      exclusivo del cliente en destino. TAM proporciona la factura proforma, el
+      certificado de origen y acompaña el despacho aduanero a través de su socio VITICOLIS.</p>
+      <ul style="margin:1rem 0">
+        <li style="margin:.4rem 0">— <strong style="color:var(--or)">Costes ocultos a anticipar&nbsp;:</strong> tasas locales, manipulación portuaria, almacenamiento.</li>
+        <li style="margin:.4rem 0">— <strong style="color:var(--or)">Prepedido&nbsp;:</strong> asegure los volúmenes y distribuya la tesorería.</li>
+        <li style="margin:.4rem 0">— <strong style="color:var(--or)">Red de importadores&nbsp;:</strong> le ponemos en contacto con socios fiables.</li>
+      </ul>
+      <p style="font-size:.85rem;color:var(--gris)">Régimen de exportación — IVA exento (art. 262 CGI).
+      Tipo de cambio fijo 1 € = 655,957 FCFA.</p>
+    </div>
+    <img src="../assets/images/hero-loire.jpg" alt="Logística de exportación de vino" class="reveal">
+  </div>
+</section>
+
+<section class="wrap center reveal">
+  <span class="surtitre">Solicitud de presupuesto</span>
+  <h2>Lancemos su primer palé</h2>
+  <div class="divider"></div>
+  <div class="card reveal" style="max-width:560px;margin:2rem auto 0;text-align:left">
+    <form data-demo>
+      <div class="form-row">
+        <div><label>Empresa</label><input type="text" required></div>
+        <div><label>País</label><select><option>Camerún</option><option>Costa de Marfil</option>
+          <option>Senegal</option><option>Gabón</option><option>Otro</option></select></div>
+      </div>
+      <div><label>Correo electrónico</label><input type="email" required></div>
+      <div><label>Volumen estimado &amp; productos deseados</label><textarea></textarea></div>
+      <button class="btn btn-fill" type="submit" style="width:100%">Recibir mi presupuesto de exportación</button>
+      <p class="form-msg" style="display:none;color:var(--or);font-size:.85rem;text-align:center">
+        Solicitud registrada — se le enviará un presupuesto firme en 48 h hábiles.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <img src="../assets/images/logo-tam.svg" alt="TAM">
+      <p style="font-size:.88rem;color:#bdb8ab;max-width:300px">
+        Casa fundada en 2016. El encuentro de los grandes terroirs de Francia
+        y la gastronomía africana. Distribución premium Francia,
+        Unión Europea y África subsahariana.</p>
+      <p class="jardins" style="margin-top:1rem">« El rigor es el alma del lujo »</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="oenotourisme.html">Enoturismo</a></li>
+        <li><a href="evenements.html">Eventos</a></li>
+        <li><a href="formation.html">Prestige Wine Academy</a></li>
+        <li><a href="blog.html">El Diario</a></li>
+        <li><a href="partenaires.html">Socios</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Profesionales</h4>
+      <ul>
+        <li><a href="chr.html">Área HoReCa</a></li>
+        <li><a href="export.html">Exportación África</a></li>
+        <li><a href="association.html">Les Jardins de l'Espoir</a></li>
+        <li><a href="cgv.html">CGV &amp; Condiciones</a></li>
+        <li><a href="mentions-legales.html">Aviso legal</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto Exportación</h4>
+      <ul>
+        <li>Marie Louise Ticki — Fundadora</li>
+        <li><a href="tel:+33652426953">+33 (0)6 52 42 69 53</a></li>
+        <li><a href="mailto:contact@terreafriqueetmillesimes.com">contact@terreafriqueetmillesimes.com</a></li>
+        <li>99 boulevard de la Reine, 78000 Versailles</li>
+        <li>Almacén: 169 bis rue des Murlins, 45000 Orléans</li>
+      </ul>
+    </div>
+  </div>
+  <div class="evin">
+    <strong style="color:#cfc9bb">EL ABUSO DEL ALCOHOL ES PELIGROSO PARA LA SALUD. CONSUMA CON MODERACIÓN.</strong><br>
+    El consumo de bebidas alcohólicas durante el embarazo, incluso en pequeñas cantidades,
+    puede tener consecuencias graves para la salud del niño.
+    Prohibida la venta de alcohol a menores — el comprador declara ser mayor de 18 años.
+  </div>
+  <div class="foot-bottom">
+    <span>© <span class="year"></span> Terres d'Afrique &amp; Millésimes — Groupe Queen Egome · SIRET 945 025 666 00013</span>
+    <span class="jardins">Una parte de cada venta apoya a Les Jardins de l'Espoir by Queen Egome</span>
+  </div>
+</footer>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
