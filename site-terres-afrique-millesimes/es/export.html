@@ -9,21 +9,28 @@
 <link rel="stylesheet" href="../assets/css/styles.css">
 
 </head>
-<body>
+<body class="univers-export">
 <header>
   <a class="brand" href="index.html"><img src="../assets/images/logo-tam-officiel.png" alt="Terres d'Afrique &amp; Millésimes"></a>
   <nav>
     <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
     <ul>
     <li><a href="index.html">Inicio</a></li>
-    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="boutique.html">Tienda Particulares</a></li>
+    <li><a href="chr.html">HoReCa Francia</a></li>
+    <li><a href="export.html" class="active">Exportación África</a></li>
     <li><a href="oenotourisme.html">Enoturismo</a></li>
     <li><a href="evenements.html">Eventos</a></li>
     <li><a href="formation.html">Academy</a></li>
+    <li><a href="librairie.html">Librería</a></li>
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="chr.html">Área HoReCa</a></li>
-    <li><a href="export.html" class="active">Exportación África</a></li>
     <li><a class="nav-cta" href="contact.html">Contacto</a></li>
+    <li class="nav-cart"><a href="boutique.html#panier-lignes" aria-label="Carrito" title="Carrito">
+      <svg class="cart-icon" viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d="M3.2 6.6h13.6l-1.35 12.1a1.5 1.5 0 0 1-1.5 1.3H6.05a1.5 1.5 0 0 1-1.5-1.3L3.2 6.6z"/>
+        <path d="M7 6.6V4.8a3 3 0 0 1 6 0v1.8"/>
+      </svg>
+    </a></li>
     <li class="lang-switch"><a href="../export.html">FR</a><span class="sep">·</span><a href="../en/export.html">EN</a><span class="sep">·</span><a href="export.html" class="current">ES</a></li>
     </ul>
   </nav>
@@ -51,28 +58,31 @@
   </div>
 </section>
 
+<!-- =====================================================================
+     Área pro Export — Acceso por el subdominio pro.terreafriqueetmillesimes.com
+     ===================================================================== -->
 <section class="wrap" style="background:var(--noir-2);border-top:1px solid rgba(201,168,76,.16);border-bottom:1px solid rgba(201,168,76,.16)">
   <div class="center">
-    <span class="surtitre reveal">Simulador</span>
-    <h2 class="reveal">Estime su coste entregado</h2>
+    <span class="surtitre reveal">Reservado a profesionales</span>
+    <h2 class="reveal">Catálogo &amp; cotización export</h2>
     <div class="divider"></div>
-    <p class="lead reveal" style="max-width:620px;margin:0 auto">Una estimación indicativa
-    transporte + cajas isotérmicas + aduana, en euros y en FCFA.</p>
+    <p class="lead reveal" style="max-width:640px;margin:0 auto">El catálogo de exportación, el
+    simulador de cotización (cajas, palés, contenedores) y la solicitud de muestras son accesibles
+    tras la creación y validación de su cuenta profesional Export. Validación manual en 48 horas
+    laborables después del control de sus documentos.</p>
   </div>
-  <div class="card reveal" style="max-width:620px;margin:2.5rem auto 0">
-    <div class="form-row">
-      <div><label>País de destino</label>
-        <select id="sim-pays">
-          <option>Camerún</option><option>Costa de Marfil</option>
-          <option>Senegal</option><option>Gabón</option>
-        </select></div>
-      <div><label>Número de cajas (6 btl)</label>
-        <input id="sim-cartons" type="number" value="10" min="10"></div>
+  <div class="acces-pro reveal">
+    <h3>Importadores · Distribuidores · Mayoristas · Grupos hoteleros</h3>
+    <p>Inscripción en línea con depósito de su registro mercantil o licencia de importación.
+    Un administrador TAM verifica sus documentos, y luego usted recibe por correo electrónico
+    el acceso al espacio pro Export (catálogo salida bodega, cotización por país, cita comercial).</p>
+    <div class="acces-pro-cta">
+      <a href="https://pro.terreafriqueetmillesimes.com/inscription-export" class="btn-univers">Crear mi cuenta Export</a>
+      <a href="https://pro.terreafriqueetmillesimes.com/connexion" class="btn-univers-outline">Iniciar sesión</a>
     </div>
-    <div><label>Valor de la mercancía HT (€)</label>
-      <input id="sim-valeur" type="number" value="1500" step="10"></div>
-    <button class="btn btn-fill" id="sim-calc" style="margin-top:1rem;width:100%">Calcular el coste entregado</button>
-    <div id="sim-result" style="margin-top:1.4rem"></div>
+    <p style="font-size:.78rem;color:var(--gris);margin-top:1.4rem;font-style:italic">
+      Espacio pro en proceso de activación — también puede enviarnos su solicitud a través de
+      <a href="contact.html" style="color:var(--or)">contacto</a> mientras tanto.</p>
   </div>
 </section>
 
@@ -130,7 +140,7 @@
     <div>
       <h4>Navegar</h4>
       <ul>
-        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="boutique.html">Tienda Particulares</a></li>
         <li><a href="oenotourisme.html">Enoturismo</a></li>
         <li><a href="evenements.html">Eventos</a></li>
         <li><a href="formation.html">Prestige Wine Academy</a></li>
@@ -141,7 +151,7 @@
     <div>
       <h4>Profesionales</h4>
       <ul>
-        <li><a href="chr.html">Área HoReCa</a></li>
+        <li><a href="chr.html">HoReCa Francia</a></li>
         <li><a href="export.html">Exportación África</a></li>
         <li><a href="association.html">Les Jardins de l'Espoir</a></li>
         <li><a href="cgv.html">CGV &amp; Condiciones</a></li>

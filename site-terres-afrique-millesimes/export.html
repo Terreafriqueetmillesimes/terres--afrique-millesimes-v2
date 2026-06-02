@@ -9,21 +9,28 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
-<body>
+<body class="univers-export">
 <header>
   <a class="brand" href="index.html"><img src="assets/images/logo-tam-officiel.png" alt="Terres d'Afrique &amp; Millésimes"></a>
   <nav>
     <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul>
     <li><a href="index.html">Accueil</a></li>
-    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="boutique.html">Boutique Particuliers</a></li>
+    <li><a href="chr.html">CHR France</a></li>
+    <li><a href="export.html" class="active">Export Afrique</a></li>
     <li><a href="oenotourisme.html">Œnotourisme</a></li>
     <li><a href="evenements.html">Événements</a></li>
     <li><a href="formation.html">Academy</a></li>
+    <li><a href="librairie.html">Librairie</a></li>
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="chr.html">Espace CHR</a></li>
-    <li><a href="export.html" class="active">Export Afrique</a></li>
     <li><a class="nav-cta" href="contact.html">Contact</a></li>
+    <li class="nav-cart"><a href="boutique.html#panier-lignes" aria-label="Panier" title="Panier">
+      <svg class="cart-icon" viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d="M3.2 6.6h13.6l-1.35 12.1a1.5 1.5 0 0 1-1.5 1.3H6.05a1.5 1.5 0 0 1-1.5-1.3L3.2 6.6z"/>
+        <path d="M7 6.6V4.8a3 3 0 0 1 6 0v1.8"/>
+      </svg>
+    </a></li>
     <li class="lang-switch"><a href="export.html" class="current">FR</a><span class="sep">·</span><a href="en/export.html">EN</a><span class="sep">·</span><a href="es/export.html">ES</a></li>
     </ul>
   </nav>
@@ -51,28 +58,33 @@
   </div>
 </section>
 
+<!-- =====================================================================
+     Espace privé pro Export — Accès par le sous-domaine pro.terreafriqueetmillesimes.com
+     Le simulateur de cotation, la demande d'échantillons et le catalogue export
+     vivent désormais dans l'app pro authentifiée (Phase 3+).
+     ===================================================================== -->
 <section class="wrap" style="background:var(--noir-2);border-top:1px solid rgba(201,168,76,.16);border-bottom:1px solid rgba(201,168,76,.16)">
   <div class="center">
-    <span class="surtitre reveal">Simulateur</span>
-    <h2 class="reveal">Estimez votre coût rendu</h2>
+    <span class="surtitre reveal">Espace réservé aux professionnels</span>
+    <h2 class="reveal">Catalogue &amp; cotation export</h2>
     <div class="divider"></div>
-    <p class="lead reveal" style="max-width:620px;margin:0 auto">Une estimation indicative
-    transport + caisses isothermes + douane, en euros et en FCFA.</p>
+    <p class="lead reveal" style="max-width:640px;margin:0 auto">Le catalogue export, le simulateur
+    de cotation (cartons, palettes, conteneurs) et la demande d'échantillons sont accessibles après
+    création et validation de votre compte professionnel Export. Validation manuelle sous 48 h ouvrées
+    après contrôle de vos documents.</p>
   </div>
-  <div class="card reveal" style="max-width:620px;margin:2.5rem auto 0">
-    <div class="form-row">
-      <div><label>Pays de destination</label>
-        <select id="sim-pays">
-          <option>Cameroun</option><option>Côte d'Ivoire</option>
-          <option>Sénégal</option><option>Gabon</option>
-        </select></div>
-      <div><label>Nombre de cartons (6 btl)</label>
-        <input id="sim-cartons" type="number" value="10" min="10"></div>
+  <div class="acces-pro reveal">
+    <h3>Importateurs · Distributeurs · Grossistes · Groupes hôteliers</h3>
+    <p>Inscription en ligne avec dépôt de votre registre de commerce ou licence d'importation.
+    Un administrateur TAM vérifie vos documents puis vous recevez par e-mail vos accès à l'espace
+    pro Export (catalogue départ cave, cotation par pays, RDV commercial).</p>
+    <div class="acces-pro-cta">
+      <a href="https://pro.terreafriqueetmillesimes.com/inscription-export" class="btn-univers">Créer mon compte Export</a>
+      <a href="https://pro.terreafriqueetmillesimes.com/connexion" class="btn-univers-outline">Me connecter</a>
     </div>
-    <div><label>Valeur marchandise HT (€)</label>
-      <input id="sim-valeur" type="number" value="1500" step="10"></div>
-    <button class="btn btn-fill" id="sim-calc" style="margin-top:1rem;width:100%">Calculer le coût rendu</button>
-    <div id="sim-result" style="margin-top:1.4rem"></div>
+    <p style="font-size:.78rem;color:var(--gris);margin-top:1.4rem;font-style:italic">
+      Espace pro en cours d'activation — vous pouvez aussi nous transmettre votre demande via
+      <a href="contact.html" style="color:var(--or)">contact</a> en attendant.</p>
   </div>
 </section>
 
@@ -130,7 +142,7 @@
     <div>
       <h4>Naviguer</h4>
       <ul>
-        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="boutique.html">Boutique Particuliers</a></li>
         <li><a href="oenotourisme.html">Œnotourisme</a></li>
         <li><a href="evenements.html">Événements</a></li>
         <li><a href="formation.html">Prestige Wine Academy</a></li>
@@ -141,7 +153,7 @@
     <div>
       <h4>Professionnels</h4>
       <ul>
-        <li><a href="chr.html">Espace CHR</a></li>
+        <li><a href="chr.html">CHR France</a></li>
         <li><a href="export.html">Export Afrique</a></li>
         <li><a href="association.html">Les Jardins de l'Espoir</a></li>
         <li><a href="cgv.html">CGV &amp; Conditions</a></li>
