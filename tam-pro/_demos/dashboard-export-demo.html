@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Export · Demo TAM Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Marcellus+SC&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --noir:#0A0908; --noir-2:#16130e; --noir-3:#1f1b14;
+  --or:#C9A84C; --or-clair:#F0D080; --or-pale:#FAF0D0; --or-vieilli:#A68A3E;
+  --gris:#9a958a; --gris-doux:#bdb8ab;
+  --terre:#8B5A2B; --terre-clair:#A97142; --terre-hover:#C28B55;
+  --titre:'Cormorant Garamond',Georgia,serif;
+  --sc:'Marcellus SC',Georgia,serif;
+  --corps:'Jost',sans-serif;
+}
+body{background:var(--noir);color:#e9e4d8;font-family:var(--corps);font-weight:300;line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none;transition:.3s}
+ul{list-style:none}
+h1,h2,h3{font-family:var(--titre);font-weight:500;color:#fff;line-height:1.2}
+
+header.top{padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(201,168,76,.2);background:rgba(22,19,14,.5)}
+.brand{display:flex;align-items:center;gap:1rem}
+.brand-logo{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--or-vieilli),var(--or));display:flex;align-items:center;justify-content:center;color:var(--noir);font-family:var(--titre);font-size:1.4rem;font-weight:600}
+.brand-label{font-family:var(--sc);font-size:.72rem;letter-spacing:.3em;color:var(--or);text-transform:uppercase}
+.user-info{display:flex;align-items:center;gap:1.4rem}
+.user-name{font-size:.92rem;color:var(--or-pale)}
+.logout{font-family:var(--sc);font-size:.72rem;letter-spacing:.3em;color:var(--gris-doux);text-transform:uppercase}
+.logout:hover{color:var(--or-clair)}
+
+.univers-banner{background:rgba(139,90,43,.18);border-top:1px solid rgba(139,90,43,.55);border-bottom:1px solid rgba(139,90,43,.55);color:var(--terre-hover);font-family:var(--sc);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;text-align:center;padding:.7rem}
+
+.container{flex:1;display:flex}
+aside{width:260px;background:var(--noir-2);border-right:1px solid rgba(201,168,76,.15);padding:1.4rem 0}
+aside nav{display:flex;flex-direction:column;padding:0 .8rem}
+.nav-item{display:flex;align-items:center;gap:.7rem;padding:.65rem 1rem;font-size:.86rem;color:var(--gris-doux);transition:all .3s;border-left:2px solid transparent}
+.nav-item:hover{color:var(--or-clair);background:rgba(201,168,76,.05)}
+.nav-item.active{background:rgba(139,90,43,.15);color:var(--terre-hover);border-left-color:var(--terre-hover)}
+.nav-item .icon{font-size:1.05rem}
+
+main{flex:1;padding:2rem;max-width:1100px}
+
+.dash-header{margin-bottom:1.8rem}
+.dash-header h1{font-size:2.2rem;margin-bottom:.3rem}
+.dash-header h1 em{font-style:italic;color:var(--or-clair)}
+.dash-meta{font-size:.85rem;color:var(--gris-doux);display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+
+.statut-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .65rem;font-family:var(--sc);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid;background:rgba(16,185,129,.1);color:#34D399;border-color:rgba(16,185,129,.3)}
+.statut-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.8}
+
+.catalog-card{background:linear-gradient(180deg,var(--noir-2),var(--noir));border:1px solid rgba(139,90,43,.3);padding:1.8rem 2rem;margin-bottom:1.4rem;position:relative;overflow:hidden;transition:all .4s}
+.catalog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--terre-clair)}
+.catalog-card:hover{border-color:rgba(139,90,43,.55);transform:translateY(-2px);box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}
+.catalog-tag{font-family:var(--sc);font-size:.65rem;letter-spacing:.3em;color:var(--terre-hover);text-transform:uppercase;margin-bottom:.5rem}
+.catalog-card h2{font-size:1.4rem;margin-bottom:.3rem}
+.catalog-card p{font-size:.9rem;color:var(--gris-doux);margin-bottom:1.2rem}
+.btn-export{display:inline-block;padding:.85rem 1.7rem;background:var(--terre);color:#fff;border:1px solid var(--terre);font-family:var(--sc);font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;transition:all .3s;box-shadow:0 10px 30px -10px rgba(139,90,43,.5)}
+.btn-export:hover{background:var(--terre-hover);border-color:var(--terre-hover);box-shadow:0 14px 36px -8px rgba(139,90,43,.7)}
+
+.quick-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-bottom:2rem}
+.qa-card{background:var(--noir-2);border:1px solid rgba(139,90,43,.3);padding:1.3rem;text-align:center;transition:all .4s;cursor:pointer}
+.qa-card:hover{border-color:rgba(139,90,43,.55);transform:translateY(-2px)}
+.qa-card .qa-icon{font-size:2rem;margin-bottom:.5rem}
+.qa-card h3{font-size:.92rem}
+
+.surtitre{font-family:var(--sc);font-size:.72rem;letter-spacing:.4em;color:var(--or);text-transform:uppercase;display:inline-flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.surtitre i{width:24px;height:1px;background:var(--or);opacity:.6}
+
+/* COMMANDES */
+.commandes-list{display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.8rem}
+.commande-row{background:var(--noir-2);border:1px solid rgba(139,90,43,.3);padding:1rem 1.2rem;display:flex;align-items:center;gap:1rem;transition:.3s}
+.commande-row:hover{border-color:rgba(139,90,43,.55)}
+.commande-icon{font-size:1.5rem}
+.commande-main{flex:1}
+.commande-line1{color:#fff;font-size:.92rem}
+.commande-line2{font-size:.72rem;color:var(--gris-doux);margin-top:.2rem}
+.commande-line2 .link{color:var(--terre-hover);cursor:pointer;text-decoration:underline;margin-right:.6rem}
+.statut-expediee{background:rgba(6,182,212,.1);color:#22D3EE;border-color:rgba(6,182,212,.3)}
+.statut-prep{background:rgba(201,168,76,.1);color:var(--or-clair);border-color:rgba(201,168,76,.3)}
+
+.offres-card{background:var(--noir-2);border:1px solid rgba(139,90,43,.3);padding:1.3rem}
+.offres-card .offre{display:flex;align-items:center;gap:.7rem;font-size:.88rem;color:#fff}
+.offres-card .offre::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--terre-hover);flex-shrink:0}
+.offres-card .deal{color:var(--terre-hover);font-weight:500}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a href="#" class="brand">
+    <span class="brand-logo">T</span>
+    <span class="brand-label">Espace Export</span>
+  </a>
+  <div class="user-info">
+    <span class="user-name">Cameroun Wine Imports</span>
+    <a href="#" class="logout">Déconnexion ⎋</a>
+  </div>
+</header>
+
+<div class="univers-banner">Univers Export · Terre d'Afrique</div>
+
+<div class="container">
+  <aside>
+    <nav>
+      <a class="nav-item active" href="#"><span class="icon">🏠</span> Tableau de bord</a>
+      <a class="nav-item" href="#"><span class="icon">📕</span> Catalogue Export</a>
+      <a class="nav-item" href="#"><span class="icon">📋</span> Conditions logistiques</a>
+      <a class="nav-item" href="#"><span class="icon">🚢</span> Cotation transport</a>
+      <a class="nav-item" href="#"><span class="icon">📝</span> Cotation produits</a>
+      <a class="nav-item" href="#"><span class="icon">🎁</span> Échantillons</a>
+      <a class="nav-item" href="#"><span class="icon">📦</span> Mes commandes</a>
+      <a class="nav-item" href="#"><span class="icon">👤</span> Mon profil</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="dash-header">
+      <h1>Bonjour, <em>Cameroun Wine Imports</em></h1>
+      <p class="dash-meta">
+        Importateur · Cameroun · XOF · FR · Statut <span class="statut-badge">Actif</span>
+      </p>
+    </div>
+
+    <div class="catalog-card">
+      <p class="catalog-tag">Catalogue Export</p>
+      <h2>Version 2026-Q2 · publié le 12/05/2026</h2>
+      <p>PDF haute qualité · prix EXW départ cave Versailles</p>
+      <a href="#" class="btn-export">Télécharger le PDF</a>
+    </div>
+
+    <div class="quick-actions">
+      <div class="qa-card"><div class="qa-icon">🚢</div><h3>Cotation transport</h3></div>
+      <div class="qa-card"><div class="qa-icon">📝</div><h3>Cotation produits</h3></div>
+      <div class="qa-card"><div class="qa-icon">🎁</div><h3>Échantillons</h3></div>
+      <div class="qa-card"><div class="qa-icon">📅</div><h3>RDV commercial</h3></div>
+    </div>
+
+    <h2 class="surtitre"><i></i> Commandes en cours (2)</h2>
+    <div class="commandes-list">
+      <div class="commande-row">
+        <span class="commande-icon">📦</span>
+        <div class="commande-main">
+          <div class="commande-line1">PRO-2026-0014 · 18 200 € · ✈ Expédiée 28/05</div>
+          <div class="commande-line2">
+            <span class="link">Facture</span>
+            <span class="link">BL</span>
+            <span class="link">Certificat d'origine</span>
+          </div>
+        </div>
+        <span class="statut-badge statut-expediee">Expédiée</span>
+      </div>
+      <div class="commande-row">
+        <span class="commande-icon">📦</span>
+        <div class="commande-main">
+          <div class="commande-line1">PRO-2026-0011 · 24 800 € · 🏭 En préparation</div>
+          <div class="commande-line2">Expédition prévue semaine 24</div>
+        </div>
+        <span class="statut-badge statut-prep">En préparation</span>
+      </div>
+    </div>
+
+    <h2 class="surtitre"><i></i> Offres ciblées</h2>
+    <div class="offres-card">
+      <p class="offre">Conteneur 20' mixte spécial Afrique de l'Ouest — <span class="deal">−12 %</span></p>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard · Demo TAM Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Marcellus+SC&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --noir:#0A0908; --noir-2:#16130e; --noir-3:#1f1b14;
+  --or:#C9A84C; --or-clair:#F0D080; --or-pale:#FAF0D0; --or-vieilli:#A68A3E;
+  --gris:#9a958a; --gris-doux:#bdb8ab;
+  --bordeaux:#6D071A; --bordeaux-clair:#8B1E2D; --bordeaux-hover:#A52A3A;
+  --terre:#8B5A2B; --terre-clair:#A97142; --terre-hover:#C28B55;
+  --titre:'Cormorant Garamond',Georgia,serif;
+  --sc:'Marcellus SC',Georgia,serif;
+  --corps:'Jost',sans-serif;
+}
+body{background:var(--noir);color:#e9e4d8;font-family:var(--corps);font-weight:300;line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none;transition:.3s}
+ul{list-style:none}
+h1,h2,h3{font-family:var(--titre);font-weight:500;color:#fff;line-height:1.2}
+
+header.top{padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(201,168,76,.2);background:rgba(22,19,14,.5)}
+.brand{display:flex;align-items:center;gap:1rem}
+.brand-logo{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--or-vieilli),var(--or));display:flex;align-items:center;justify-content:center;color:var(--noir);font-family:var(--titre);font-size:1.4rem;font-weight:600}
+.brand-label{font-family:var(--sc);font-size:.72rem;letter-spacing:.3em;color:var(--or);text-transform:uppercase}
+.user-info{display:flex;align-items:center;gap:1.4rem}
+.user-name{font-size:.92rem;color:var(--or-pale)}
+.logout{font-family:var(--sc);font-size:.72rem;letter-spacing:.3em;color:var(--gris-doux);text-transform:uppercase}
+
+.container{flex:1;display:flex}
+aside{width:240px;background:var(--noir-2);border-right:1px solid rgba(201,168,76,.15);padding:1.4rem 0}
+aside nav{display:flex;flex-direction:column;padding:0 .8rem}
+.nav-item{display:flex;align-items:center;justify-content:space-between;padding:.65rem 1rem;font-size:.85rem;color:var(--gris-doux);transition:all .3s;border-left:2px solid transparent}
+.nav-item:hover{color:var(--or-clair);background:rgba(201,168,76,.05)}
+.nav-item.active{background:rgba(201,168,76,.15);color:var(--or-clair);border-left-color:var(--or)}
+.nav-item-label{display:flex;align-items:center;gap:.7rem}
+.nav-item .badge{font-family:var(--sc);font-size:.62rem;letter-spacing:.1em;padding:.1rem .4rem;background:rgba(201,168,76,.2);color:var(--or-clair)}
+.nav-item.active .badge{background:var(--or);color:var(--noir)}
+
+main{flex:1;padding:2rem;max-width:1280px}
+
+.dash-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:1.6rem}
+.dash-header h1{font-size:2rem}
+.surtitre{font-family:var(--sc);font-size:.7rem;letter-spacing:.4em;color:var(--or);text-transform:uppercase;display:inline-flex;align-items:center;gap:.8rem}
+.surtitre i{width:24px;height:1px;background:var(--or);opacity:.6}
+.period-select{background:var(--noir-2);border:1px solid rgba(201,168,76,.3);padding:.5rem .8rem;color:var(--or-pale);font-family:var(--sc);font-size:.78rem}
+
+/* KPI GRID */
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem}
+.kpi-card{background:var(--noir-2);border:1px solid rgba(201,168,76,.2);padding:1.4rem;transition:.3s}
+.kpi-card:hover{border-color:rgba(201,168,76,.4)}
+.kpi-label{font-family:var(--sc);font-size:.62rem;letter-spacing:.3em;color:var(--gris-doux);text-transform:uppercase;margin-bottom:.7rem}
+.kpi-value{font-family:var(--titre);font-size:2.3rem;color:#fff;margin-bottom:.4rem;line-height:1}
+.kpi-trend{font-family:var(--sc);font-size:.7rem;letter-spacing:.15em;color:#34D399}
+
+/* TABLE */
+.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.see-all{font-family:var(--sc);font-size:.7rem;letter-spacing:.3em;color:var(--or-clair);text-transform:uppercase}
+.see-all:hover{color:var(--or)}
+.data-table{background:var(--noir-2);border:1px solid rgba(201,168,76,.2);overflow:hidden;margin-bottom:1.8rem}
+.data-table table{width:100%;font-size:.88rem}
+.data-table th{background:var(--noir-3);text-align:left;padding:.8rem 1.2rem;font-family:var(--sc);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--or-pale);font-weight:normal}
+.data-table td{padding:.9rem 1.2rem;border-top:1px solid rgba(201,168,76,.1);color:var(--gris-doux)}
+.data-table tr:hover td{background:rgba(201,168,76,.04)}
+.data-table .society{color:#fff}
+.data-table .society-email{display:block;font-size:.7rem;color:var(--gris);margin-top:.15rem}
+.type-pill{font-family:var(--sc);font-size:.62rem;letter-spacing:.2em;padding:.18rem .55rem;border:1px solid;text-transform:uppercase}
+.type-chr{color:var(--bordeaux-hover);border-color:rgba(109,7,26,.55)}
+.type-export{color:var(--terre-hover);border-color:rgba(139,90,43,.55)}
+.action-link{color:var(--or-clair);font-family:var(--sc);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+
+/* STATUT BADGES */
+.statut{display:inline-flex;align-items:center;gap:.4rem;padding:.22rem .55rem;font-family:var(--sc);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid}
+.statut::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.8}
+.statut-en_attente{background:rgba(201,168,76,.1);color:var(--or-clair);border-color:rgba(201,168,76,.3)}
+.statut-actif{background:rgba(16,185,129,.1);color:#34D399;border-color:rgba(16,185,129,.3)}
+.statut-repondue{background:rgba(16,185,129,.1);color:#34D399;border-color:rgba(16,185,129,.3)}
+.statut-en_cours{background:rgba(201,168,76,.1);color:var(--or-clair);border-color:rgba(201,168,76,.3)}
+.statut-acceptee{background:rgba(16,185,129,.15);color:#6EE7B7;border-color:rgba(16,185,129,.4)}
+
+/* DEMANDES list */
+.demande-card{background:var(--noir-2);border:1px solid rgba(201,168,76,.15);padding:.85rem 1.2rem;display:flex;align-items:center;gap:1rem;margin-bottom:.5rem;transition:.3s}
+.demande-card:hover{border-color:rgba(201,168,76,.3)}
+.demande-type{font-family:var(--sc);font-size:.6rem;letter-spacing:.2em;color:var(--or-pale);text-transform:uppercase}
+.demande-id{color:#fff;font-size:.88rem;margin-right:.5rem}
+.demande-msg{flex:1;font-size:.78rem;color:var(--gris);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a href="#" class="brand">
+    <span class="brand-logo">T</span>
+    <span class="brand-label">Administration</span>
+  </a>
+  <div class="user-info">
+    <span class="user-name">Marie Louise Ticki</span>
+    <a href="#" class="logout">Déconnexion ⎋</a>
+  </div>
+</header>
+
+<div class="container">
+  <aside>
+    <nav>
+      <a class="nav-item active" href="#"><span class="nav-item-label">🏠 Tableau de bord</span></a>
+      <a class="nav-item" href="#"><span class="nav-item-label">👥 Comptes</span><span class="badge">2</span></a>
+      <a class="nav-item" href="#"><span class="nav-item-label">📕 Catalogues</span></a>
+      <a class="nav-item" href="#"><span class="nav-item-label">📝 Demandes CHR</span></a>
+      <a class="nav-item" href="#"><span class="nav-item-label">📝 Demandes Export</span></a>
+      <a class="nav-item" href="#"><span class="nav-item-label">📦 Commandes Export</span></a>
+      <a class="nav-item" href="#"><span class="nav-item-label">🏷 Segments CRM</span></a>
+      <a class="nav-item" href="#"><span class="nav-item-label">📢 Campagnes</span></a>
+      <a class="nav-item" href="#"><span class="nav-item-label">📜 Audit log</span></a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="dash-header">
+      <div>
+        <span class="surtitre"><i></i> Administration</span>
+        <h1>Vue d'ensemble</h1>
+      </div>
+      <select class="period-select">
+        <option>30 derniers jours</option>
+      </select>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Comptes CHR créés</div>
+        <div class="kpi-value">142</div>
+        <div class="kpi-trend">↑ +12 sur 30j</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Comptes Export créés</div>
+        <div class="kpi-value">87</div>
+        <div class="kpi-trend">↑ +8 sur 30j</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Taux de validation</div>
+        <div class="kpi-value">78 %</div>
+        <div class="kpi-trend">↑ +3 pts sur 30j</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Demandes de devis</div>
+        <div class="kpi-value">58</div>
+        <div class="kpi-trend">↑ +14 sur 30j</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Téléchargements catalogue</div>
+        <div class="kpi-value">203</div>
+        <div class="kpi-trend">↑ +47 sur 30j</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Conversion devis → cmd</div>
+        <div class="kpi-value">34 %</div>
+        <div class="kpi-trend">↑ +5 pts sur 30j</div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="surtitre"><i></i> Comptes en attente de validation (2)</span>
+      <a href="#" class="see-all">Voir tous →</a>
+    </div>
+    <div class="data-table">
+      <table>
+        <thead><tr><th>Société · Contact</th><th>Type</th><th>Pays</th><th>Inscription</th><th></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="society">Le Riad Casa</div><span class="society-email">Hicham Benali · achats@riadcasa.ma</span></td>
+            <td><span class="type-pill type-chr">CHR</span></td>
+            <td>Maroc</td>
+            <td>27/05/2026</td>
+            <td style="text-align:right"><a href="#" class="action-link">Voir →</a></td>
+          </tr>
+          <tr>
+            <td><div class="society">Diallo SARL Import</div><span class="society-email">M. Diallo · m.diallo@diallo-import.ci</span></td>
+            <td><span class="type-pill type-export">Export</span></td>
+            <td>Côte d'Ivoire</td>
+            <td>27/05/2026</td>
+            <td style="text-align:right"><a href="#" class="action-link">Voir →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header"><span class="surtitre"><i></i> Demandes du jour (3)</span></div>
+    <div class="demande-card">
+      <span class="demande-type">DEVIS</span>
+      <span class="demande-id">#D1247</span>
+      <span class="demande-msg">12 bouteilles Lestage + 6 Champagne — Le Médoc, Paris</span>
+      <span class="statut statut-repondue">Répondue</span>
+    </div>
+    <div class="demande-card">
+      <span class="demande-type">DEVIS</span>
+      <span class="demande-id">#D1245</span>
+      <span class="demande-msg">Demande prix volume cuvée Bouchard — Le Médoc, Paris</span>
+      <span class="statut statut-en_cours">En cours</span>
+    </div>
+    <div class="demande-card">
+      <span class="demande-type">RDV</span>
+      <span class="demande-id">#D1242</span>
+      <span class="demande-msg">RDV présentation gamme automne 2026 — Le Médoc</span>
+      <span class="statut statut-acceptee">Acceptée</span>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
