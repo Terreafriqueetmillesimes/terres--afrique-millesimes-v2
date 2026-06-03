@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boutique — Grands crus de France · Terres d'Afrique &amp; Millésimes</title>
+<meta name="description" content="Achetez les grands crus de Terres d'Afrique & Millésimes : Bordeaux, Bourgogne, Champagne. Prix EUR et FCFA, accords mets africains, livraison thermo-régulée.">
+<link rel="icon" href="assets/images/logo-tam.svg">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  /* Mention TTC discrète sous chaque prix HT — additif uniquement */
+  .prix-ttc-note{font-size:.78rem;color:var(--gris);margin-top:.4rem;font-style:italic;letter-spacing:.02em;display:block}
+  /* Note Stripe en attente d'activation */
+  .stripe-note{font-size:.78rem;color:var(--or);margin-top:.6rem;text-align:center;font-family:var(--sc);letter-spacing:.18em;text-transform:uppercase}
+</style>
+</head>
+<body class="univers-particuliers">
+<header>
+  <a class="brand" href="index.html"><img src="assets/images/logo-tam-officiel.png" alt="Terres d'Afrique &amp; Millésimes"></a>
+  <nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="boutique.html" class="active">Boutique Particuliers</a></li>
+    <li><a href="chr.html">CHR France</a></li>
+    <li><a href="export.html">Export Afrique</a></li>
+    <li><a href="oenotourisme.html">Œnotourisme</a></li>
+    <li><a href="evenements.html">Événements</a></li>
+    <li><a href="formation.html">Academy</a></li>
+    <li><a href="librairie.html">Librairie</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a class="nav-cta" href="contact.html">Contact</a></li>
+    <li class="nav-cart"><a href="boutique.html#panier-lignes" aria-label="Panier" title="Panier">
+      <svg class="cart-icon" viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d="M3.2 6.6h13.6l-1.35 12.1a1.5 1.5 0 0 1-1.5 1.3H6.05a1.5 1.5 0 0 1-1.5-1.3L3.2 6.6z"/>
+        <path d="M7 6.6V4.8a3 3 0 0 1 6 0v1.8"/>
+      </svg>
+    </a></li>
+    <li class="lang-switch"><a href="boutique.html" class="current">FR</a><span class="sep">·</span><a href="en/boutique.html">EN</a><span class="sep">·</span><a href="es/boutique.html">ES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner boutique-banner">
+  <!-- Photo cave à vin grands crus français — vérifiée visuellement -->
+  <img class="bbn-img" alt=""
+       src="https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=2400&q=90&auto=format&fit=crop"
+       onerror="this.style.display='none';this.parentElement.classList.add('bbn-img-failed')">
+  <div class="bbn-bg" aria-hidden="true"></div>
+
+  <!-- Overlay sombre uniforme (plus aucun halo / tint / silhouette parasite) -->
+  <div class="bbn-overlay" aria-hidden="true"></div>
+
+  <!-- 4 coins or cartouche joaillerie — seule décoration restante -->
+  <span class="bbn-corner tl" aria-hidden="true"></span>
+  <span class="bbn-corner tr" aria-hidden="true"></span>
+  <span class="bbn-corner bl" aria-hidden="true"></span>
+  <span class="bbn-corner br" aria-hidden="true"></span>
+
+  <!-- Texte CENTRÉ, hiérarchie : CAVE (petit espacé) + Terres d'Afrique & Millésimes (1 ligne) -->
+  <div class="banner-inner">
+    <span class="surtitre">Cave</span>
+    <h1>Terres d'Afrique &amp; Millésimes</h1>
+    <div class="bbn-rule"></div>
+    <p class="lead">Une sélection rigoureuse de grands crus, vérifiée à la source.</p>
+  </div>
+  <!-- Régions en pied de hero — discret, éditorial -->
+  <div class="bbn-regions" aria-label="Par région">
+    <span class="bbn-regions-label">Par région</span>
+    <span class="bbn-regions-list">Bordeaux &middot; Bourgogne &middot; Champagne &middot; Vallée du Rhône &middot; Vallée de la Loire &middot; Vins du Monde</span>
+  </div>
+</section>
+
+<style>
+  /* ============================================================
+     HERO BOUTIQUE — Cave luxe Unsplash, propre, texte centré
+     Plus aucune tache / silhouette / halo / tint parasite
+     ============================================================ */
+
+  .banner.boutique-banner{
+    position:relative;overflow:hidden;
+    min-height:78vh;
+    background:#0A0908 none;
+    display:flex;align-items:center;justify-content:center;
+    padding:0;
+  }
+
+  /* Image cave — full bleed, breath très lent */
+  .boutique-banner .bbn-img{
+    position:absolute;inset:-2%;
+    width:104%;height:104%;
+    object-fit:cover;object-position:center;
+    transform:scale(1.04);
+    animation:bbnBreath 28s ease-in-out infinite;
+    will-change:transform;
+    z-index:0;display:block;
+  }
+  .boutique-banner .bbn-bg{
+    position:absolute;inset:0;background:#0A0908;z-index:-1;
+  }
+  .boutique-banner.bbn-img-failed .bbn-bg{
+    background:radial-gradient(ellipse at center, #1c1610 0%, #0A0908 70%);
+  }
+
+  /* Overlay UNIFORME sombre — aucune asymétrie, aucun halo */
+  .boutique-banner .bbn-overlay{
+    position:absolute;inset:0;pointer-events:none;z-index:2;
+    background:linear-gradient(180deg,
+      rgba(10,9,8,.48) 0%,
+      rgba(10,9,8,.58) 50%,
+      rgba(10,9,8,.78) 100%);
+  }
+
+  /* 4 coins or cartouche joaillerie — seule décoration */
+  .boutique-banner .bbn-corner{
+    position:absolute;width:48px;height:48px;
+    border:1.4px solid rgba(201,168,76,.55);z-index:6;
+  }
+  .boutique-banner .bbn-corner.tl{top:32px;left:32px;border-right:0;border-bottom:0}
+  .boutique-banner .bbn-corner.tr{top:32px;right:32px;border-left:0;border-bottom:0}
+  .boutique-banner .bbn-corner.bl{bottom:32px;left:32px;border-right:0;border-top:0}
+  .boutique-banner .bbn-corner.br{bottom:32px;right:32px;border-left:0;border-top:0}
+
+  /* Texte CENTRÉ — hiérarchie éditoriale luxe, plus de respiration */
+  .boutique-banner .banner-inner{
+    position:relative;z-index:10;
+    text-align:center;
+    max-width:92%;
+    padding:8.5rem 5vw 7rem;
+    text-shadow:0 2px 20px rgba(0,0,0,.55), 0 1px 6px rgba(0,0,0,.45);
+  }
+
+  /* Régions en pied de hero — discret, raffiné, éditorial */
+  .boutique-banner .bbn-regions{
+    position:absolute;
+    bottom:1.8rem;left:50%;
+    transform:translateX(-50%);
+    z-index:7;
+    text-align:center;
+    pointer-events:none;
+    max-width:88vw;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .boutique-banner .bbn-regions-label{
+    display:inline-block;
+    font-family:'Marcellus SC',Georgia,serif;
+    font-size:.55rem;letter-spacing:.42em;
+    text-transform:uppercase;color:rgba(240,208,128,.7);
+    margin-right:1rem;
+    position:relative;top:-1px;
+  }
+  .boutique-banner .bbn-regions-label::after{
+    content:"";display:inline-block;
+    width:14px;height:1px;background:rgba(240,208,128,.5);
+    vertical-align:middle;margin-left:.6rem;
+  }
+  .boutique-banner .bbn-regions-list{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-style:italic;font-size:.82rem;
+    letter-spacing:.05em;color:rgba(245,239,224,.62);
+  }
+  /* CAVE — petit, espacé, élégant, en haut */
+  .boutique-banner .banner-inner .surtitre{
+    display:block;
+    font-family:'Marcellus SC',Georgia,serif;
+    font-size:.8rem;letter-spacing:.62em;
+    text-transform:uppercase;
+    color:#F0D080;
+    margin:0 0 1.6rem;
+  }
+  /* Titre principal — UNE SEULE LIGNE sur desktop */
+  .boutique-banner .banner-inner h1{
+    font-family:'Playfair Display','Cormorant Garamond',Georgia,serif;
+    font-weight:500;letter-spacing:.012em;line-height:1.15;
+    font-size:clamp(1.7rem, 3.2vw, 2.6rem);
+    white-space:nowrap;
+    margin:0;color:#FFFFFF;
+  }
+  /* Filet or central */
+  .boutique-banner .bbn-rule{
+    width:90px;height:1px;margin:1.7rem auto 1.5rem;
+    background:linear-gradient(90deg, transparent, #C9A84C, transparent);
+    position:relative;
+  }
+  .boutique-banner .bbn-rule::after{
+    content:"";position:absolute;left:50%;top:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+    width:5px;height:5px;background:#C9A84C;
+  }
+  /* Lead centré */
+  .boutique-banner .banner-inner .lead{
+    text-shadow:0 1px 12px rgba(0,0,0,.5);
+    max-width:580px;margin:0 auto;
+    font-size:1rem;line-height:1.75;
+    color:#e9e4d8;text-align:center;
+  }
+
+  @keyframes bbnBreath{
+    0%, 100% { transform:scale(1.04) translate3d(0,0,0); }
+    50%      { transform:scale(1.08) translate3d(-.8%,-.5%,0); }
+  }
+
+  /* Tablette */
+  @media(max-width:880px){
+    .banner.boutique-banner{min-height:64vh}
+    .boutique-banner .bbn-corner{width:32px;height:32px}
+    .boutique-banner .bbn-corner.tl{top:20px;left:20px}
+    .boutique-banner .bbn-corner.tr{top:20px;right:20px}
+    .boutique-banner .bbn-corner.bl{bottom:20px;left:20px}
+    .boutique-banner .bbn-corner.br{bottom:20px;right:20px}
+  }
+  /* Mobile : autorise le wrap du titre, tailles compactées */
+  @media(max-width:680px){
+    .boutique-banner .banner-inner{padding:7rem 5vw 5.5rem}
+    .boutique-banner .banner-inner .surtitre{
+      font-size:.7rem;letter-spacing:.5em;margin-bottom:1.2rem;
+    }
+    .boutique-banner .banner-inner h1{
+      white-space:normal;
+      font-size:clamp(1.3rem, 6vw, 1.9rem);
+      line-height:1.2;
+    }
+    .boutique-banner .bbn-corner{width:22px;height:22px}
+    .boutique-banner .bbn-corner.tl{top:12px;left:12px}
+    .boutique-banner .bbn-corner.tr{top:12px;right:12px}
+    .boutique-banner .bbn-corner.bl{bottom:12px;left:12px}
+    .boutique-banner .bbn-corner.br{bottom:12px;right:12px}
+    .boutique-banner .bbn-regions{bottom:1.1rem;max-width:92vw}
+    .boutique-banner .bbn-regions-label{display:none}
+    .boutique-banner .bbn-regions-list{font-size:.7rem;letter-spacing:.03em}
+  }
+</style>
+
+<!-- FILTRES -->
+<section class="wrap" style="padding-bottom:2rem">
+  <div class="center">
+    <span class="pill">Rouges</span><span class="pill">Blancs</span><span class="pill">Rosés</span>
+    <span class="pill">Champagnes</span><span class="pill">Crémants</span><span class="pill">Spiritueux</span>
+    <span class="pill">Sans alcool</span><span class="pill">Accessoires</span><span class="pill">Livres &amp; Formations</span>
+  </div>
+</section>
+
+<!-- ================= PRODUITS VÉRIFIÉS ================= -->
+<section class="wrap" style="padding-top:0">
+  <div class="center">
+    <span class="surtitre reveal">Sélection vérifiée — Catalogue Export 2026</span>
+    <h2 class="reveal">Nos cuvées signature</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="produit-grid" style="margin-top:2.5rem">
+
+    <!-- PRODUIT 1 -->
+    <article class="produit reveal">
+      <img src="assets/images/bouteille-rouge.svg" alt="Château Lestage Simon">
+      <div class="produit-body">
+        <span class="tag">Bordeaux · Cru Bourgeois</span>
+        <span class="region">AOC Haut-Médoc</span>
+        <h3>Château Lestage Simon</h3>
+        <p class="millesime">Cuvée Tradition · Millésime 2019</p>
+        <p class="desc">Robe grenat profond, reflets pourpres. Bouquet de fruits noirs —
+        cassis, mûre — souligné d'épices douces et de cèdre. Bouche ample, tanins
+        fins et soyeux, finale persistante sur la réglisse et le cuir noble.</p>
+        <div class="prix"><span class="eur">28,50 € HT</span><span class="cfa">18&nbsp;695 FCFA HT</span></div>
+        <span class="prix-ttc-note">≈ 34,20 € TTC / 22&nbsp;434 FCFA TTC · TVA 20 % incluse</span>
+        <button class="btn btn-sm" data-add data-nom="Ch. Lestage Simon 2019" data-prix="28.50">Ajouter au panier</button>
+      </div>
+    </article>
+
+    <!-- PRODUIT 2 -->
+    <article class="produit reveal">
+      <img src="assets/images/bouteille-blanc.svg" alt="Domaine Jean Bouchard">
+      <div class="produit-body">
+        <span class="tag">Bourgogne · Village</span>
+        <span class="region">AOC Gevrey-Chambertin</span>
+        <h3>Domaine Jean Bouchard</h3>
+        <p class="millesime">Vieilles Vignes · Millésime 2020</p>
+        <p class="desc">Rubis intense aux nuances grenat. Cerise noire, framboise mûre,
+        sous-bois et violette. Bouche soyeuse, charnue, trame minérale et allonge
+        crayeuse caractéristique de la Côte de Nuits.</p>
+        <div class="prix"><span class="eur">68,00 € HT</span><span class="cfa">44&nbsp;605 FCFA HT</span></div>
+        <span class="prix-ttc-note">≈ 81,60 € TTC / 53&nbsp;526 FCFA TTC · TVA 20 % incluse</span>
+        <button class="btn btn-sm" data-add data-nom="Dom. Jean Bouchard 2020" data-prix="68.00">Ajouter au panier</button>
+      </div>
+    </article>
+
+    <!-- PRODUIT 3 -->
+    <article class="produit reveal">
+      <img src="assets/images/bouteille-champagne.svg" alt="Maison J. Charpentier">
+      <div class="produit-body">
+        <span class="tag">Champagne</span>
+        <span class="region">AOC Champagne</span>
+        <h3>Maison J. Charpentier</h3>
+        <p class="millesime">Cuvée Réserve · Brut</p>
+        <p class="desc">Or pâle aux reflets dorés, cordon de bulles fines. Agrumes
+        confits, pomme mûre et brioche dorée. Bouche vineuse, équilibrée par une
+        fraîcheur citronnée, finale crayeuse et longue.</p>
+        <div class="prix"><span class="eur">32,50 € HT</span><span class="cfa">21&nbsp;318 FCFA HT</span></div>
+        <span class="prix-ttc-note">≈ 39,00 € TTC / 25&nbsp;582 FCFA TTC · TVA 20 % incluse</span>
+        <button class="btn btn-sm" data-add data-nom="Champagne J. Charpentier Brut" data-prix="32.50">Ajouter au panier</button>
+      </div>
+    </article>
+
+  </div>
+  <p class="center" style="font-size:.85rem;color:var(--gris);margin-top:2rem">
+    Vallée du Rhône, Vallée de la Loire, Languedoc &amp; Provence, Cognac &amp; Spiritueux,
+    Vins du Monde — <em>sélections disponibles sur demande.</em> Aucun prix n'est publié
+    sans vérification préalable auprès du château ou du distributeur officiel.</p>
+</section>
+
+<!-- ================= FICHE PRODUIT DÉTAILLÉE ================= -->
+<section class="wrap" style="background:var(--noir-2);border-top:1px solid rgba(201,168,76,.16);border-bottom:1px solid rgba(201,168,76,.16)">
+  <div class="split">
+    <img src="assets/images/bouteille-rouge.svg" alt="Château Lestage Simon" class="reveal" style="aspect-ratio:3/4">
+    <div class="txt reveal">
+      <span class="surtitre">Fiche produit · l'esprit du terroir</span>
+      <h2>Château Lestage Simon 2019</h2>
+      <div class="divider left"></div>
+      <p><strong style="color:var(--or)">L'esprit —</strong> Un Médoc de garde, généreux
+      et droit, qui incarne l'élégance accessible des Crus Bourgeois.</p>
+
+      <h3 style="font-size:1.2rem;color:var(--or-clair);margin-top:1.4rem">Caractéristiques techniques</h3>
+      <table>
+        <tr><td>Cépages</td><td>Cabernet Sauvignon 60 % · Merlot 35 % · Petit Verdot 5 %</td></tr>
+        <tr><td>Élevage</td><td>12 mois en fûts de chêne français</td></tr>
+        <tr><td>Service</td><td>16–18 °C · Volume 75 cl</td></tr>
+        <tr><td>Apogée</td><td>2024 — 2032</td></tr>
+      </table>
+
+      <div class="accord">
+        <h4>Accords mets &amp; vins africains</h4>
+        <p style="font-size:.94rem">Côte de bœuf grillée · Magret de canard aux figues ·
+        Agneau de pré-salé · <strong style="color:var(--or-clair)">N'dolè camerounais</strong>
+        aux arachides et viande fumée · Comté et Saint-Nectaire affinés.</p>
+        <p class="proverbe">« La marmite de l'amitié cuit lentement, mais elle nourrit toute la famille. »
+        <span>— Proverbe camerounais</span></p>
+      </div>
+
+      <p style="font-size:.92rem;color:#c4bfb2"><strong style="color:var(--or)">Argumentaire de vente —</strong>
+      Le compromis idéal entre prestige bordelais et prix d'accès. Cuvée de rotation
+      forte en CHR, valeur sûre à l'export, support parfait pour une masterclass accords.</p>
+
+      <div class="prix" style="margin-top:1.2rem"><span class="eur">28,50 € HT</span><span class="cfa">18&nbsp;695 FCFA HT</span></div>
+      <span class="prix-ttc-note">≈ 34,20 € TTC / 22&nbsp;434 FCFA TTC · TVA 20 % incluse</span>
+      <button class="btn" data-add data-nom="Ch. Lestage Simon 2019" data-prix="28.50">Ajouter au panier</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CROSS-SELL / UPSELL ================= -->
+<section class="wrap">
+  <div class="center">
+    <span class="surtitre reveal">Aller plus loin</span>
+    <h2 class="reveal">Composez votre expérience</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="grid g3" style="margin-top:2.5rem">
+    <div class="card reveal"><h3>Pack Découverte Afrique</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">3 vins + un livret d'accords mets africains
+      + fiche recette du n'dolè. Le cadeau idéal.</p>
+      <div class="prix" style="margin-top:1rem"><span class="eur">à partir de 95 €</span></div>
+      <button class="btn btn-sm" data-add data-nom="Pack Découverte Afrique" data-prix="95.00">Ajouter le pack</button></div>
+    <div class="card reveal"><h3>Vin + Formation</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Une cuvée signature + un module
+      d'initiation Prestige Wine Academy en ligne.</p>
+      <div class="prix" style="margin-top:1rem"><span class="eur">à partir de 149 €</span></div>
+      <a href="formation.html" class="btn btn-sm">Voir les modules</a></div>
+    <div class="card reveal"><h3>Club Premium TAM</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Abonnement trimestriel&nbsp;: 3 cuvées
+      sélectionnées, accès prioritaire aux événements, –10 % boutique.</p>
+      <div class="prix" style="margin-top:1rem"><span class="eur">99 € / trimestre</span></div>
+      <button class="btn btn-sm" data-add data-nom="Abonnement Club Premium" data-prix="99.00">Rejoindre le Club</button></div>
+  </div>
+</section>
+
+<!-- ================= PANIER ================= -->
+<section class="wrap" style="max-width:680px">
+  <div class="center">
+    <span class="surtitre reveal">Votre panier</span>
+    <h2 class="reveal">Finaliser la commande</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="card reveal" style="margin-top:2rem">
+    <div id="panier-lignes"></div>
+    <div class="cart-total" id="panier-total"></div>
+    <button class="btn btn-fill" id="checkout" style="width:100%;margin-top:1.5rem">Paiement sécurisé · Stripe / PayPal</button>
+    <p class="stripe-note">Stripe en cours d'activation · disponible après finalisation du compte marchand</p>
+    <p style="font-size:.78rem;color:var(--gris);margin-top:.9rem;text-align:center">
+      Transport thermo-régulé 0,99 € HT / bouteille · Livraison 2 à 5 jours ouvrés en France métropolitaine.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <img src="assets/images/logo-tam-officiel.png" alt="TAM">
+      <p style="font-size:.88rem;color:#bdb8ab;max-width:300px">
+        Maison fondée en 2016. La rencontre des grands terroirs de France
+        et de la gastronomie africaine. Distribution premium France,
+        Union Européenne et Afrique subsaharienne.</p>
+      <p class="jardins" style="margin-top:1rem">« La rigueur est l'âme du luxe »</p>
+    </div>
+    <div>
+      <h4>Naviguer</h4>
+      <ul>
+        <li><a href="boutique.html">Boutique Particuliers</a></li>
+        <li><a href="oenotourisme.html">Œnotourisme</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="formation.html">Prestige Wine Academy</a></li>
+        <li><a href="blog.html">Le Journal</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Professionnels</h4>
+      <ul>
+        <li><a href="chr.html">CHR France</a></li>
+        <li><a href="export.html">Export Afrique</a></li>
+        <li><a href="association.html">Les Jardins de l'Espoir</a></li>
+        <li><a href="cgv.html">CGV &amp; Conditions</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Export</h4>
+      <ul>
+        <li>Marie Louise Ticki — Fondatrice</li>
+        <li><a href="tel:+33652426953">+33 (0)6 52 42 69 53</a></li>
+        <li><a href="mailto:contact@terreafriqueetmillesimes.com">contact@terreafriqueetmillesimes.com</a></li>
+        <li>99 boulevard de la Reine, 78000 Versailles</li>
+        <li>Entrepôt : 169 bis rue des Murlins, 45000 Orléans</li>
+      </ul>
+    </div>
+  </div>
+  <div class="evin">
+    <strong style="color:#cfc9bb">L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ — À CONSOMMER AVEC MODÉRATION.</strong><br>
+    La consommation de boissons alcoolisées pendant la grossesse, même en faible quantité,
+    peut avoir des conséquences graves sur la santé de l'enfant.
+    La vente d'alcool aux mineurs est interdite — l'acheteur déclare avoir 18 ans révolus.
+  </div>
+  <div class="foot-bottom">
+    <span>© <span class="year"></span> Terres d'Afrique &amp; Millésimes — Groupe Queen Egome · SIRET 945 025 666 00013</span>
+    <span class="jardins">Une part de chaque vente soutient Les Jardins de l'Espoir by Queen Egome</span>
+  </div>
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

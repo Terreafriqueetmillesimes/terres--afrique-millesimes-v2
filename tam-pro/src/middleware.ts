@@ -1,25 +1,15 @@
-import { NextRequest, NextResponse } from 'next/server'
+import createMiddleware from 'next-intl/middleware'
+import { routing } from './i18n/routing'
 
 /**
- * Middleware Next.js — vérifie l'authentification sur les routes protégées.
- * V1 mock : ne fait rien (les pages sont toutes accessibles pour démo).
- * À brancher Supabase en Phase 2.6+.
+ * Middleware i18n (next-intl).
+ * N'agit QUE sur la racine et les chemins localisés (/fr, /en, /es).
+ * Les routes pro (/espace-chr, /espace-export, /admin) et d'auth
+ * (/connexion, /inscription-*) ne sont PAS interceptées : elles passent
+ * directement (la garde d'authentification sera rebranchée en Sprint 6).
  */
-export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl
-
-  // V1 mock : laisse passer tout. À remplacer :
-  // const supabase = createMiddlewareClient(req)
-  // const { data: { session } } = await supabase.auth.getSession()
-  //
-  // if (pathname.startsWith('/espace-chr') && (!session || compte.type !== 'chr' || compte.statut !== 'actif')) {
-  //   return NextResponse.redirect(new URL('/connexion', req.url))
-  // }
-  // (idem pour /espace-export et /admin)
-
-  return NextResponse.next()
-}
+export default createMiddleware(routing)
 
 export const config = {
-  matcher: ['/espace-chr/:path*', '/espace-export/:path*', '/admin/:path*'],
+  matcher: ['/', '/(fr|en|es)/:path*'],
 }

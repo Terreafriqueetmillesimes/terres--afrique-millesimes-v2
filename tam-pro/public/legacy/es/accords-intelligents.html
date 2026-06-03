@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maridajes Inteligentes — Plato ↔ Botella · Terres d'Afrique &amp; Millésimes</title>
+<meta name="description" content="Módulo signature TAM: introduzca un plato africano y reciba el maridaje vino, champagne, licor o sin alcohol. O elija una botella, reciba el plato sugerido.">
+<link rel="icon" href="../assets/images/logo-tam.svg">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><img src="../assets/images/logo-tam-officiel.png" alt="Terres d'Afrique &amp; Millésimes"></a>
+  <nav>
+    <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="boutique.html">Tienda Particulares</a></li>
+    <li><a href="chr.html">HoReCa Francia</a></li>
+    <li><a href="export.html">Exportación África</a></li>
+    <li><a href="oenotourisme.html">Enoturismo</a></li>
+    <li><a href="evenements.html">Eventos</a></li>
+    <li><a href="formation.html">Academy</a></li>
+    <li><a href="librairie.html">Librería</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a class="nav-cta" href="contact.html">Contacto</a></li>
+    <li class="nav-cart"><a href="boutique.html#panier-lignes" aria-label="Carrito" title="Carrito">
+      <svg class="cart-icon" viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d="M3.2 6.6h13.6l-1.35 12.1a1.5 1.5 0 0 1-1.5 1.3H6.05a1.5 1.5 0 0 1-1.5-1.3L3.2 6.6z"/>
+        <path d="M7 6.6V4.8a3 3 0 0 1 6 0v1.8"/>
+      </svg>
+    </a></li>
+    <li class="lang-switch"><a href="../accords-intelligents.html">FR</a><span class="sep">·</span><a href="../en/accords-intelligents.html">EN</a><span class="sep">·</span><a href="accords-intelligents.html" class="current">ES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner" style="background-image:linear-gradient(rgba(10,9,8,.66),rgba(10,9,8,.92)),url('https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=1800&q=85&auto=format&fit=crop');min-height:54vh">
+  <div class="banner-inner">
+    <span class="surtitre ornate"><i></i>Módulo signature · IA maridajes<i></i></span>
+    <h1 class="display-luxe">Maridajes <em>inteligentes</em></h1>
+    <div class="fleuron">&#10070;</div>
+    <p class="lead">El vino justo para su plato. El plato justo para su botella.
+    Una lectura sumiller de la Casa, a una palabra de distancia.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="pairing-tool reveal adinkra-frame" style="max-width:780px;margin:0 auto">
+    <div class="pt-toggle">
+      <button class="active" data-mode="dish">Plato &rarr; Botella</button>
+      <button data-mode="bottle">Botella &rarr; Plato</button>
+    </div>
+
+    <div id="pt-dish" class="pt-pane">
+      <label>Introduzca el plato (español o nombre local)</label>
+      <input type="text" id="pt-dish-input" placeholder="n'dolè, thiéboudienne, poulet DG, mafé, tajine…" list="pt-dish-list" autocomplete="off">
+      <datalist id="pt-dish-list"></datalist>
+      <button class="btn btn-fill" id="pt-dish-go" style="margin-top:.9rem">Encontrar el maridaje signature</button>
+    </div>
+
+    <div id="pt-bottle" class="pt-pane" style="display:none">
+      <label>Elija una categoría de botella</label>
+      <select id="pt-bottle-input">
+        <option value="">— Seleccionar —</option>
+      </select>
+      <button class="btn btn-fill" id="pt-bottle-go" style="margin-top:.9rem">Encontrar el plato signature</button>
+    </div>
+
+    <div class="pt-result" id="pt-result">
+      <p class="pt-empty">El maridaje aparecerá aquí. Nuestro motor cruza más de 30 platos africanos
+      con una bodega de vinos, champagnes, licores y cuvées sin alcohol premium.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="center">
+    <span class="surtitre reveal">Metodología</span>
+    <h2 class="reveal editorial">La <em>firma</em> de la Casa</h2>
+    <div class="kente-divider"></div>
+  </div>
+  <div class="grid g3" style="margin-top:2.5rem">
+    <div class="card reveal">
+      <h3>1. Lectura del plato</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Descomponemos cada plato africano por
+      su estructura&nbsp;: amargor del n'dolè, dulzura del plátano, ahumado de la carne,
+      acidez del tomate, profundidad de los cacahuetes, frescura de las hierbas.</p>
+    </div>
+    <div class="card reveal">
+      <h3>2. Lectura del vino</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Tanino, acidez, azúcar residual, burbuja,
+      grado alcohólico, crianza. Cada cuvée tiene su carta de identidad — del Médoc al
+      Chenin del Loira, del Champagne al Cognac, hasta los bissap sin alcohol.</p>
+    </div>
+    <div class="card reveal">
+      <h3>3. La unión firmada</h3>
+      <p style="font-size:.92rem;color:#c4bfb2">Marie Louise Ticki y su círculo de
+      sumilleres validan cada maridaje. Sin algoritmo ciego&nbsp;: una experiencia humana,
+      arraigada en dos continentes y treinta años de práctica.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="background:var(--noir-2);border-top:1px solid rgba(201,168,76,.16);border-bottom:1px solid rgba(201,168,76,.16)">
+  <div class="center">
+    <span class="surtitre reveal">Continuar la experiencia</span>
+    <h2 class="reveal editorial">Reciba nuestros maridajes <em>cada mes</em></h2>
+    <div class="kente-divider"></div>
+    <p class="lead reveal" style="max-width:680px;margin:0 auto 1.6rem">
+      El Círculo TAM&nbsp;: botellas seleccionadas, recetas de maridaje y lectura
+      sumiller, entregadas a su mesa. Tres fórmulas — de la Descubierta al Prestigio.
+    </p>
+    <a href="abonnements.html" class="btn btn-fill">Descubrir las suscripciones</a>
+    <a href="#" class="btn" data-lead-trigger style="margin-left:.6rem">Recibir 5 maridajes gratis</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <img src="../assets/images/logo-tam-officiel.png" alt="TAM">
+      <p style="font-size:.88rem;color:#bdb8ab;max-width:300px">
+        Casa fundada en 2016. El encuentro de los grandes terroirs de Francia y del mundo,
+        y de la alta gastronomía africana. Distribución premium Francia, Unión Europea
+        y África subsahariana.</p>
+      <p class="jardins" style="margin-top:1rem">« El rigor es el alma del lujo »</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="boutique.html">Tienda Particulares</a></li>
+        <li><a href="abonnements.html">El Círculo TAM</a></li>
+        <li><a href="accords-intelligents.html">Maridajes Inteligentes</a></li>
+        <li><a href="oenotourisme.html">Enoturismo</a></li>
+        <li><a href="evenements.html">Eventos</a></li>
+        <li><a href="formation.html">Prestige Wine Academy</a></li>
+        <li><a href="librairie.html">Librería &amp; Accesorios</a></li>
+        <li><a href="blog.html">El Diario</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Profesionales</h4>
+      <ul>
+        <li><a href="chr.html">HoReCa Francia</a></li>
+        <li><a href="export.html">Exportación África</a></li>
+        <li><a href="partenaires.html">Socios</a></li>
+        <li><a href="association.html">Les Jardins de l'Espoir</a></li>
+        <li><a href="cgv.html">CGV &amp; Condiciones</a></li>
+        <li><a href="mentions-legales.html">Aviso legal</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Oficinas &amp; Contacto</h4>
+      <ul>
+        <li>Marie Louise Ticki — Fundadora</li>
+        <li><a href="tel:+33652426953">+33 (0)6 52 42 69 53</a></li>
+        <li><a href="mailto:contact@terreafriqueetmillesimes.com">contact@terreafriqueetmillesimes.com</a></li>
+        <li>Oficinas: 99 boulevard de la Reine, 78000 Versailles</li>
+        <li>Almacén: 169 bis rue des Murlins, 45000 Orléans</li>
+      </ul>
+    </div>
+  </div>
+  <div class="evin">
+    <strong style="color:#cfc9bb">EL ABUSO DEL ALCOHOL ES PELIGROSO PARA LA SALUD. CONSUMA CON MODERACIÓN.</strong><br>
+    El consumo de bebidas alcohólicas durante el embarazo, incluso en pequeñas cantidades,
+    puede tener consecuencias graves para la salud del niño.
+    Prohibida la venta de alcohol a menores — el comprador declara ser mayor de 18 años.
+  </div>
+  <div class="foot-bottom">
+    <span>© <span class="year"></span> Terres d'Afrique &amp; Millésimes — Groupe Queen Egome · SIRET 945 025 666 00013</span>
+    <span class="jardins">Una parte de cada venta apoya a Les Jardins de l'Espoir by Queen Egome</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const DATA = {
+    dishes: [
+      { keys:['ndole','ndolè','n\'dolè'], name:"N'dolè camerunés",
+        v:"Haut-Médoc, Cabernet Sauvignon — Château Lestage Simon 2019",
+        c:"Champagne Brut Réserve, Pinot Noir — J. Charpentier",
+        s:"Whisky single malt turbado ligero — Highland 12 años",
+        sa:"Bissap reserva, infusión larga — sin alcohol", note:"El tanino del Médoc une el amargor de las hojas, el cedro prolonga el ahumado." },
+      { keys:['thiebou','thieb','thiéboudienne'], name:"Thiéboudienne senegalés",
+        v:"Rosado de Provenza estructurado — Bandol",
+        c:"Champagne Blanc de Blancs — frescura salina",
+        s:"Ron agrícola añejo 8 años — Martinica",
+        sa:"Limonada al jengibre, hielo picado", note:"La acidez del tomate y el pescado piden una burbuja salina o un rosado con cuerpo." },
+      { keys:['kedjenou'], name:"Kedjenou de pollo (Costa de Marfil)",
+        v:"Sauvignon del Loira — Sancerre, o Chenin seco",
+        c:"Champagne Blanc de Blancs",
+        s:"Ginebra floral, tónica premium",
+        sa:"Hibisco helado, ralladura de lima", note:"Plato estofado al vapor — pide viveza y mineralidad." },
+      { keys:['mafe','mafé','cacahuete'], name:"Mafé (ternera al cacahuete)",
+        v:"Côtes du Rhône, Garnacha-Syrah",
+        c:"Champagne Rosado extra-brut",
+        s:"Bourbon en barrica nueva",
+        sa:"Té helado hibisco-jengibre", note:"La untuosidad del cacahuete pide materia frutal y especiada." },
+      { keys:['poulet dg','poulet d.g.'], name:"Poulet DG (Camerún)",
+        v:"Borgoña Pinot Noir — Gevrey-Chambertin Vieilles Vignes",
+        c:"Champagne Rosado de Saignée",
+        s:"Cognac Hors d'Âge",
+        sa:"Limonada piña-albahaca", note:"El plato de fiesta merece la seda de un Pinot Noir y la finura de una burbuja rosada." },
+      { keys:['yassa'], name:"Yassa pollo (Senegal)",
+        v:"Blanco seco del Loira — Sancerre, Pouilly-Fumé",
+        c:"Champagne Brut Nature",
+        s:"Vodka premium helada",
+        sa:"Agua con gas y limón confitado", note:"La acidez del limón y la cebolla largamente confitada piden frescura y tensión." },
+      { keys:['jollof'], name:"Jollof rice (África Occidental)",
+        v:"Syrah del Ródano, o Malbec de Argentina",
+        c:"Champagne Rosado Brut",
+        s:"Ron especiado",
+        sa:"Bissap helado picante", note:"La especia y el tomate concentrado florecen sobre una fruta negra especiada." },
+      { keys:['tajine','tagine'], name:"Tajín de cordero a las ciruelas (Marruecos)",
+        v:"Châteauneuf-du-Pape tinto, o Pinotage sudafricano",
+        c:"Champagne Rosado de añada",
+        s:"Armagnac Hors d'Âge",
+        sa:"Té helado a la menta", note:"Lo agridulce pide una materia generosa, frutas negras y notas confitadas." },
+      { keys:['fufu','foufou'], name:"Fufu con salsa de palma",
+        v:"Côtes-du-Rhône Villages",
+        c:"Champagne Blanc de Noirs",
+        s:"Whisky single malt ligero",
+        sa:"Tónica de jengibre casera", note:"La salsa de palma exige estructura y generosidad." },
+      { keys:['attieke','attiéké'], name:"Attiéké con pescado a la brasa",
+        v:"Blanco de Provenza o Sauvignon Blanc",
+        c:"Crémant rosado brut",
+        s:"Aquavit o ginebra escandinava",
+        sa:"Agua infusionada pepino-menta", note:"Sémola de mandioca + pescado: frescura, cítricos, salinidad." },
+      { keys:['suya'], name:"Suya (brocheta especiada — Nigeria)",
+        v:"Malbec, o Shiraz australiano",
+        c:"Champagne Rosado Brut",
+        s:"Mezcal artesanal",
+        sa:"Limonada chile-mango", note:"La especia yaji ama la fruta madura y la redondez tánica." },
+      { keys:['poulet bicycle','poulet bicyclette'], name:"Poulet bicyclette a la brasa (Camerún)",
+        v:"Pinot Noir de Borgoña — village",
+        c:"Champagne Blanc de Noirs",
+        s:"Whisky single malt afrutado",
+        sa:"Té helado limón-rosa", note:"Carne firme del pollo de campo, marinada de hierbas: finura y fruta roja." },
+      { keys:['braai'], name:"Braai sudafricano",
+        v:"Pinotage o Cabernet Sauvignon de Stellenbosch",
+        c:"Champagne Brut Tradition",
+        s:"Whisky single malt sherry cask",
+        sa:"Rooibos helado especiado", note:"Carnes al fuego y especias ahumadas: estructura, fruta negra, fondo tostado." },
+      { keys:['plantain','aloko','dodo','plátano'], name:"Aloko / dodo (plátano frito)",
+        v:"Beaujolais Villages",
+        c:"Champagne Rosado ligero",
+        s:"Ron blanco con limón",
+        sa:"Ginger beer casero", note:"El dulzor del plátano pide vivacidad frutal." },
+      { keys:['pescado','tilapia','poisson braise'], name:"Pescado a la brasa en salsa de tomate",
+        v:"Blanco mineral — Picpoul de Pinet, Muscadet sur lie",
+        c:"Champagne Blanc de Blancs",
+        s:"Ginebra cítrica, tónica",
+        sa:"Agua sin gas con cítricos", note:"El tomate al fuego y la carne yodada: tensión, limón, sal." },
+      { keys:['samosa','samoussa','sambusa'], name:"Samosas especiadas",
+        v:"Riesling seco de Alsacia",
+        c:"Champagne Extra-Brut",
+        s:"Ginebra floral",
+        sa:"Limonada con pimienta", note:"Masa frita y relleno especiado: frescura aromática y burbuja viva." },
+      { keys:['cocoyam','taro','sauce jaune'], name:"Salsa amarilla con cocoyam (Camerún)",
+        v:"Blanco graso y tenso — Meursault, o Chenin de Vouvray",
+        c:"Champagne de añada Blanc de Blancs",
+        s:"Whisky single malt no turbado",
+        sa:"Infusión de citronela helada", note:"La untuosidad del tubérculo y la yema piden materia y tensión." },
+      { keys:['gombo','okra','quingombó'], name:"Salsa de okra (pescado ahumado)",
+        v:"Côtes-du-Rhône Blanco — Viognier",
+        c:"Champagne Blanc de Blancs",
+        s:"Whisky single malt ligero",
+        sa:"Té verde helado con limón", note:"Textura fibrosa y ahumado del pescado: materia y frescura en equilibrio." }
+    ],
+    bottles: [
+      { key:'medoc-haut-medoc', label:"Burdeos tinto — Haut-Médoc, Cru Bourgeois",
+        dish:"N'dolè camerunés, magret a los higos, cordero de marisma",
+        note:"El cedro y el regaliz del Cabernet responden al ahumado y al amargor noble." },
+      { key:'bourgogne-pinot', label:"Borgoña tinto — Pinot Noir Gevrey-Chambertin",
+        dish:"Poulet DG, pato lacado, pintada a las colmenillas",
+        note:"La seda del Pinot Noir une carnes nobles y platos de fiesta." },
+      { key:'champagne-brut', label:"Champagne Brut Réserve",
+        dish:"N'dolè, thiéboudienne, plateau de mariscos, sushi",
+        note:"La burbuja salina despierta especias y yodo, la dosificación redondea." },
+      { key:'champagne-rose', label:"Champagne Rosado — Saignée",
+        dish:"Poulet DG, mafé, tajín de cordero, postre de frutos rojos",
+        note:"Más materia, más fruta: para carnes especiadas y afrutadas." },
+      { key:'rhone-syrah', label:"Valle del Ródano — Syrah / Garnacha",
+        dish:"Mafé, jollof rice, platos guisados especiados, tajín",
+        note:"Fruta negra, pimienta y garriga: une salsas concentradas." },
+      { key:'loire-sancerre', label:"Loira blanco — Sancerre, Sauvignon Blanc",
+        dish:"Kedjenou, yassa pollo, attiéké pescado, quesos frescos",
+        note:"Viveza cítrica, mineralidad calcárea, perfecto sobre la acidez y el pescado." },
+      { key:'provence-rose', label:"Rosado de Provenza — Bandol",
+        dish:"Thiéboudienne, ensalada compuesta, pescado a la brasa, mesa de verano",
+        note:"Estructurado y fresco: aguanta frente a platos especiados y yodados." },
+      { key:'cognac-hors-age', label:"Cognac Hors d'Âge",
+        dish:"Poulet DG en maridaje de excepción, quesos curados, postre de chocolate",
+        note:"Madera noble, fruta confitada, longitud esférica." },
+      { key:'rhum-agricole', label:"Ron agrícola añejo — Martinica",
+        dish:"Thiéboudienne, jollof rice, postre piña-ron",
+        note:"Notas herbáceas y frutas exóticas: firma de las Antillas." },
+      { key:'bissap-zero', label:"Sin alcohol premium — Bissap Reserva",
+        dish:"N'dolè, mafé, poulet bicyclette, todos los platos especiados",
+        note:"Acidulado, ligeramente tánico: la alternativa noble para todos." }
+    ]
+  };
+
+  const dishInput = document.getElementById('pt-dish-input');
+  const dishList = document.getElementById('pt-dish-list');
+  const dishGo = document.getElementById('pt-dish-go');
+  const bottleInput = document.getElementById('pt-bottle-input');
+  const bottleGo = document.getElementById('pt-bottle-go');
+  const result = document.getElementById('pt-result');
+
+  DATA.dishes.forEach(d => { const o = document.createElement('option'); o.value = d.name; dishList.appendChild(o); });
+  DATA.bottles.forEach(b => { const o = document.createElement('option'); o.value = b.key; o.textContent = b.label; bottleInput.appendChild(o); });
+
+  document.querySelectorAll('.pt-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pt-toggle button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const m = btn.dataset.mode;
+      document.getElementById('pt-dish').style.display = (m==='dish') ? '' : 'none';
+      document.getElementById('pt-bottle').style.display = (m==='bottle') ? '' : 'none';
+      result.innerHTML = '<p class="pt-empty">El maridaje aparecerá aquí.</p>';
+    });
+  });
+
+  function findDish(q) {
+    q = q.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim();
+    if (!q) return null;
+    return DATA.dishes.find(d => d.keys.some(k => {
+      const kn = k.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+      return q.includes(kn) || kn.includes(q);
+    })) || null;
+  }
+
+  dishGo.addEventListener('click', () => {
+    const q = dishInput.value;
+    const d = findDish(q);
+    if (!d) {
+      result.innerHTML = '<p class="pt-empty">Plato no reconocido. Pruebe: n\'dolè, thiéboudienne, mafé, poulet DG, kedjenou, jollof, tajine, yassa, suya, attiéké…</p>';
+      return;
+    }
+    result.innerHTML = `
+      <h4>Maridaje signature — ${d.name}</h4>
+      <p class="pt-suggestion">&#127863; Vino &middot; ${d.v}</p>
+      <p class="pt-suggestion">&#127870; Champagne &middot; ${d.c}</p>
+      <p class="pt-suggestion">&#129355; Licor &middot; ${d.s}</p>
+      <p class="pt-suggestion">&#127817; Sin alcohol premium &middot; ${d.sa}</p>
+      <p class="pt-note"><em>${d.note}</em></p>
+      <a href="boutique.html" class="btn btn-sm" style="margin-top:.8rem">Ver nuestras cuvées</a>`;
+  });
+
+  bottleGo.addEventListener('click', () => {
+    const k = bottleInput.value;
+    const b = DATA.bottles.find(x => x.key === k);
+    if (!b) {
+      result.innerHTML = '<p class="pt-empty">Seleccione primero una categoría de botella.</p>';
+      return;
+    }
+    result.innerHTML = `
+      <h4>Platos sugeridos — ${b.label}</h4>
+      <p class="pt-suggestion">&#127869; ${b.dish}</p>
+      <p class="pt-note"><em>${b.note}</em></p>
+      <a href="boutique.html" class="btn btn-sm" style="margin-top:.8rem">Descubrir esta categoría</a>`;
+  });
+})();
+</script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
