@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "siteTitle": "Terres d'Afrique & Millésimes",
+    "siteDescription": "Casa de selección de vinos, champagnes y licores de excepción — un puente enológico entre Francia y África. Tienda, formaciones, enoturismo y espacios profesionales CHR y Exportación."
+  },
+  "nav": {
+    "accueil": "Inicio",
+    "boutique": "Tienda",
+    "formations": "Formaciones",
+    "oenotourisme": "Enoturismo",
+    "blog": "Diario",
+    "association": "Asociación",
+    "contact": "Contacto",
+    "espacePro": "Área Profesional",
+    "panier": "Carrito"
+  },
+  "home": {
+    "surtitre": "Casa fundada en 2016 · Groupe Queen Egome",
+    "titlePre": "El vino,",
+    "titleEm": "un puente",
+    "titlePost": "entre dos continentes",
+    "lede": "Casa dedicada a la selección de vinos, champagnes, licores y bebidas de excepción. Abastecimiento directo, trazabilidad controlada y experiencia en los terruños de África y del mundo.",
+    "ctaBuy": "Comprar nuestros vinos",
+    "ctaExp": "Reservar una experiencia",
+    "scroll": "Descubrir"
+  },
+  "footer": {
+    "explorer": "Explorar",
+    "professionnels": "Profesionales",
+    "legal": "Legal y Contacto",
+    "baseline": "Una firma, dos continentes.",
+    "newsletterTitle": "La Carta de la Casa",
+    "newsletterPlaceholder": "Su dirección de correo",
+    "newsletterCta": "Suscribirse",
+    "cgv": "Condiciones de venta",
+    "mentions": "Aviso legal",
+    "espaceChr": "Área CHR",
+    "espaceExport": "Área Exportación",
+    "devenirPartenaire": "Ser socio",
+    "connexion": "Iniciar sesión",
+    "modere": "El abuso del alcohol es peligroso para la salud — consúmase con moderación",
+    "siret": "Groupe Queen Egome · SIRET 945 025 666 00013"
+  },
+  "common": {
+    "langue": "Idioma"
+  }
+}

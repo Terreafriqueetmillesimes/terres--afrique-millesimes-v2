@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "siteTitle": "Terres d'Afrique & Millésimes",
+    "siteDescription": "A curated house of exceptional wines, champagnes and spirits — an oenological bridge between France and Africa. Shop, courses, wine tourism and professional CHR & Export spaces."
+  },
+  "nav": {
+    "accueil": "Home",
+    "boutique": "Shop",
+    "formations": "Courses",
+    "oenotourisme": "Wine Tourism",
+    "blog": "Journal",
+    "association": "Association",
+    "contact": "Contact",
+    "espacePro": "Professional Area",
+    "panier": "Cart"
+  },
+  "home": {
+    "surtitre": "House founded in 2016 · Groupe Queen Egome",
+    "titlePre": "Wine,",
+    "titleEm": "a bridge",
+    "titlePost": "between two continents",
+    "lede": "A house dedicated to selecting exceptional wines, champagnes, spirits and fine beverages. Direct sourcing, controlled traceability and expertise of terroirs from Africa and beyond.",
+    "ctaBuy": "Shop our wines",
+    "ctaExp": "Book an experience",
+    "scroll": "Discover"
+  },
+  "footer": {
+    "explorer": "Explore",
+    "professionnels": "Professionals",
+    "legal": "Legal & Contact",
+    "baseline": "One signature, two continents.",
+    "newsletterTitle": "The House Letter",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterCta": "Subscribe",
+    "cgv": "Terms of Sale",
+    "mentions": "Legal Notice",
+    "espaceChr": "CHR Area",
+    "espaceExport": "Export Area",
+    "devenirPartenaire": "Become a partner",
+    "connexion": "Sign in",
+    "modere": "Excessive alcohol consumption is harmful — please drink responsibly",
+    "siret": "Groupe Queen Egome · SIRET 945 025 666 00013"
+  },
+  "common": {
+    "langue": "Language"
+  }
+}
